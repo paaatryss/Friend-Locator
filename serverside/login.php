@@ -10,7 +10,7 @@ $password = $_GET['password'];
 $auth = new Auth();
 
 $ret = $auth->login($login, $password);
-echo $ret." taki chuj";
+
 if($ret!=FALSE)
 {
 	$response = Array('token' => $ret);
