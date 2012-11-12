@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="title">Friend Locator</string>
+    <string name="login">login</string>
+    <string name="password">hasło</string>
+    <string name="rememberMe">Zapamietaj Login i Hasło</string>
+    <string name="forgot">Zapomniałem loginu lub hasła</string>
+    <string name="register">Zarejestruj się</string>
+    <string name="zalogujButtonText">Zaloguj się</string>
+    <string name="app_name">Friend Locator</string>
+    <item name="Haslo" type="id">Haslo</item>
+    <string name="registerLabel">Rejestracja</string>
+    <string name="titleRegistry">Wypełnij formularz</string>
+    <item name="HasloPowtorz" type="id">HalsloPowtorz</item>
+    <string name="passwordRepeat">powtórz hasło</string>
+
+</resources>
