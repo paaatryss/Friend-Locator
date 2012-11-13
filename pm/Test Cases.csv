@@ -1,0 +1,46 @@
+STORY 1,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Włączam aplikacje,Ukazuje się erkan logowania,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Wpisuje login:testlogin i haslo:testhaslo klikam zaloguj (taki uzytkownik istnieje),Pojawia się ekran główny,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Wpisuje login:user@hotmail.com i hasło:abrakadabra,Pojawia się okno informujące podaniu błednego loginu lub hasła,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Wpisuje login i haslo nie istniejacego uzytkownika,Pojawia się okno informujące podaniu błednego loginu lub hasła,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Bez wpisania loginu i hasła klikam przycisk zaloguj,Pojawia się okno informujące podaniu błednego loginu lub hasła,
+STORY 2,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Włączam aplikacje,Ukazuje się erkan logowania,
+2,Klikam na przycisk zarejestruj się,przechodzi do okna rejestracja,
+3,wpisuje login:user email:user@gmail.com hasło:user i klikam przycisk zarejestruj się,pojawia się ekran główny,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Włączam aplikacje,Ukazuje się erkan logowania,
+2,Klikam na przycisk zarejestruj się,przechodzi do okna rejestracja,
+3,wpisuje login:user email:user hasło:user22 i klikam przycisk zarejestruj się,pojawia się okno informujące o błednym emailu bądź haśle,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Włączam aplikacje,Ukazuje się erkan logowania,
+2,Klikam na przycisk zarejestruj się,przechodzi do okna rejestracja,
+3,wpisuje login:user email:user@gmail.com hasło:user i klikam przycisk zarejestruj się,pojawia się okno  informujące o błędnym emailu bądź haśle,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,Włączam aplikacje,Ukazuje się erkan logowania,
+2,Klikam na przycisk zarejestruj się,przechodzi do okna rejestracja,
+3,wpisuje login:user email:user@gmail.com hasło:user33 i klikam przycisk zarejestruj się,pojawia się okno  informujące że podany login jest juz zajęty,
+STORY 3,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,"Wpisuje poprawny login i haslo, zaznaczam zapamietaj login i haslo i klikam zaloguj",Pojawia sie ekran glowny,
+2,Zamykam aplikacje,Widze appdrawer,
+3,Wlaczam aplikacje ponownie,Pojawia sie ekran glowny,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,"Wpisuje niepoprawny login i haslo, zaznaczam zapamietaj login i haslo, i klikam zaloguj",pojawia sie informacja o zlym loginie lub hasle,
+,,,
+STEPID,ACTION,EXPRECTED RESULT,RESULT
+1,"Zostawiam puste pole loginu i hasla, zaznaczam zapamietaj login i haslo, i klikam zaloguj",pojawia sie informacja o zlym loginie lub hasle,
