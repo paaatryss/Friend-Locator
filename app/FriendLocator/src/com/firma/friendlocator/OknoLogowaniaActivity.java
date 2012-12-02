@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+test
+
 
 public class OknoLogowaniaActivity extends Activity {
 
