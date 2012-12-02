@@ -1,14 +1,11 @@
 package com.firma.friendlocator;
 
 import android.os.Bundle;
-
-chuj
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-chuj
 public class OknoLogowaniaActivity extends Activity {
 
 	final EditText loginField = (EditText) findViewById(R.id.Login);  
