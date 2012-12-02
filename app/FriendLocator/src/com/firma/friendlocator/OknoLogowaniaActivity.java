@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 test
-
+test2
 
 public class OknoLogowaniaActivity extends Activity {
 
