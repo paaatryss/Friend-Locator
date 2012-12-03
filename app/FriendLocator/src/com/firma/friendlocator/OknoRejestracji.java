@@ -1,10 +1,12 @@
 package com.firma.friendlocator;
 
-import com.example.friend_locator.R;
+import com.firma.friendlocator.R;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 
 public class OknoRejestracji extends Activity {
@@ -21,6 +23,9 @@ public class OknoRejestracji extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+        WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_okno_rejestracji);
     }
     

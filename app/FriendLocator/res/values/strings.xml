@@ -14,5 +14,7 @@
     <string name="titleRegistry">Wypełnij formularz</string>
     <item name="HasloPowtorz" type="id">HalsloPowtorz</item>
     <string name="passwordRepeat">powtórz hasło</string>
+    <string name="hint_email">email</string>
+    <string name="button_wyslij">wyslij</string>
 
 </resources>

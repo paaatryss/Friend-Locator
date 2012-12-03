@@ -1,7 +1,7 @@
 package com.firma.friendlocator;
 
 
-import com.example.friend_locator.R;
+import com.firma.friendlocator.R;
 
 import android.os.Bundle;
 import android.app.Activity;

@@ -8,7 +8,50 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Okno rejestracji do zrobienia przez Ciebie"
+        android:text="Aby się zarejestrować prosze wypełnić poniższe pola"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/text_login_rejestracja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/hint_login" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/text_haslo_rejestracja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/hint_haslo"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/text_email_rejestracja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/button_zarejestruj_rejestracja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="51dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:text="@string/button_zarejestruj" />
 
 </LinearLayout>

@@ -1,5 +1,5 @@
 /** Automatically generated file. DO NOT MODIFY */
-package com.example.friend_locator;
+package com.firma.friendlocator;
 
 public final class BuildConfig {
     public final static boolean DEBUG = true;
