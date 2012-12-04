@@ -51,6 +51,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="51dp"
         android:gravity="center_vertical|center_horizontal"
+        android:onClick="login"
         android:minHeight="50dp"
         android:minWidth="200dp"
         android:text="@string/button_zarejestruj" />
