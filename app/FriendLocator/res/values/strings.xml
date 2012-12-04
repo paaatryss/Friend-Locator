@@ -16,5 +16,6 @@
     <string name="passwordRepeat">powtórz hasło</string>
     <string name="hint_email">email</string>
     <string name="button_wyslij">wyslij</string>
+    <string name="naglowek_okno_rejestracja">Aby się zarejestrować prosze wypełnić poniższe pola</string>
 
 </resources>

@@ -8,7 +8,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aby się zarejestrować prosze wypełnić poniższe pola"
+        android:text="@string/naglowek_okno_rejestracja"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
@@ -18,7 +18,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="@string/hint_login" >
+        android:hint="@string/hint_login"
+        android:inputType="text" >
 
         <requestFocus />
     </EditText>

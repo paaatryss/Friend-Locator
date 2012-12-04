@@ -11,14 +11,14 @@ import android.widget.EditText;
 
 public class OknoRejestracji extends Activity {
 
-	/** final EditText loginField = (EditText) findViewById(R.id.Login);  
+	/*EditText loginField = (EditText) findViewById(R.id.text_login_rejestracja);  
 	String login = loginField.getText().toString();  
 	final EditText passwordField = (EditText) findViewById(R.id.Haslo);  
 	String haslo = passwordField.getText().toString();   
 	final EditText emailField = (EditText) findViewById(R.id.Haslo);  
 	String email = emailField.getText().toString();
 	final EditText email2Field = (EditText) findViewById(R.id.Haslo);  
-	String email2 = email2Field.getText().toString(); **/
+	String email2 = email2Field.getText().toString(); */
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class OknoRejestracji extends Activity {
     }
     
     public void login(View button) {
-    	
+    	EditText loginField = (EditText) findViewById(R.id.text_login_rejestracja);  
+    	String login = loginField.getText().toString(); 
     }
 }

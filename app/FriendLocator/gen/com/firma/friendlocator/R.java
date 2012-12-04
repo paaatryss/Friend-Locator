@@ -56,6 +56,7 @@ public final class R {
         public static final int hint_email=0x7f04000c;
         public static final int hint_haslo=0x7f040003;
         public static final int hint_login=0x7f040002;
+        public static final int naglowek_okno_rejestracja=0x7f04000e;
         public static final int passwordRepeat=0x7f04000b;
         public static final int registerLabel=0x7f040009;
         public static final int text_powitanie=0x7f040001;
