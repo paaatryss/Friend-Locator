@@ -14,18 +14,19 @@
      android:layout_alignParentBottom="true"
      android:layout_alignParentLeft="true"
      android:layout_alignParentRight="true"
-     android:layout_below="@+id/button1"
+     android:layout_below="@+id/button_menu"
      android:apiKey="0tyavlpZIin99sFFSxQsLD_PfBQ_inoVTtHh8Pw"
      android:clickable="true"
      android:enabled="true" />
 
  <Button
-     android:id="@+id/button1"
+     android:id="@+id/button_menu"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_alignParentLeft="true"
      android:layout_alignParentTop="true"
      android:minHeight="30dp"
-     android:text="Button" />
+     android:onClick="menu"
+     android:text="@string/menu" />
 
 </RelativeLayout>

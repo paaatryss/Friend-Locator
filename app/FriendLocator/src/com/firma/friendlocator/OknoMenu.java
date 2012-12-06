@@ -2,8 +2,10 @@ package com.firma.friendlocator;
 
 import java.util.List;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -51,6 +53,10 @@ public class OknoMenu extends MapActivity {
 
 	protected boolean isRouteDisplayed() {
 		return false;
+	}
+	public void menu(View view) {
+	    Intent intent = new Intent(this, OknoMenuGlowne.class);
+	    startActivity(intent);
 	}
 
 }

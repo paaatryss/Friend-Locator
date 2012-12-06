@@ -17,5 +17,16 @@
     <string name="hint_email">email</string>
     <string name="button_wyslij">wyslij</string>
     <string name="naglowek_okno_rejestracja">Aby się zarejestrować prosze wypełnić poniższe pola</string>
+    <string name="naglowek_okno_zapomnialem_danych">Okno zapomnialem danych ogarnij to</string>
+    <string name="menu">Menu</string>
+    <string name="button_powrot">Powrót</string>
+    <string name="button_ustawienia">Ustawienia</string>
+    <string name="button_about">About</string>
+    <string name="button_znajomi">Znajomi</string>
+    <string name="button_wyloguj">Wyloguj się</string>
+    <string name="button_wyjdz">Wyjdź</string>
+    <string name="button_pomoc">Pomoc</string>
+    <string name="button_autorzy">Autorzy</string>
+    <string name="button_przelacz_widok">Przełącz widok</string>
 
 </resources>

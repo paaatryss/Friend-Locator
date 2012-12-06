@@ -8,7 +8,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Okno zapomnialem danych ogarnij to"
+        android:text="@string/naglowek_okno_zapomnialem_danych"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
