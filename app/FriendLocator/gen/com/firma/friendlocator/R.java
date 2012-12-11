@@ -50,8 +50,9 @@ public final class R {
         public static final int activity_okno_logowania=0x7f030000;
         public static final int activity_okno_menu=0x7f030001;
         public static final int activity_okno_menu_glowne=0x7f030002;
-        public static final int activity_okno_rejestracji=0x7f030003;
-        public static final int activity_okno_zapomnialem_danych=0x7f030004;
+        public static final int activity_okno_pomocy=0x7f030003;
+        public static final int activity_okno_rejestracji=0x7f030004;
+        public static final int activity_okno_zapomnialem_danych=0x7f030005;
     }
     public static final class menu {
         public static final int activity_okno_logowania=0x7f070000;
@@ -80,6 +81,7 @@ public final class R {
         public static final int naglowek_okno_zapomnialem_danych=0x7f04000f;
         public static final int passwordRepeat=0x7f04000b;
         public static final int registerLabel=0x7f040009;
+        public static final int text_pomoc=0x7f04001a;
         public static final int text_powitanie=0x7f040001;
         public static final int title=0x7f040000;
         public static final int titleRegistry=0x7f04000a;

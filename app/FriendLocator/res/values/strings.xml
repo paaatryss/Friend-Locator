@@ -28,5 +28,6 @@
     <string name="button_pomoc">Pomoc</string>
     <string name="button_autorzy">Autorzy</string>
     <string name="button_przelacz_widok">Przełącz widok</string>
+    <string name="text_pomoc">Pomoc</string>
 
 </resources>

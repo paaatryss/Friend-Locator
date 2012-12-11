@@ -16,13 +16,18 @@ public class OknoMenuGlowne extends Activity {
 				setContentView(R.layout.activity_okno_menu_glowne);
 		
 	}
-	public void wyjdz(View view) {
-		int pid = android.os.Process.myPid();
-		android.os.Process.killProcess(pid); 
-	}
-	public void wyloguj(View view){
+	public void wyloguj(View view) {
 		finish();
 		Intent intent = new Intent(this, OknoLogowania.class);
+	    startActivity(intent);
+	}
+	public void powrot(View view){
+		finish();
+		Intent intent = new Intent(this, OknoMenu.class);
+	    startActivity(intent);
+	}
+	public void pomoc(View view){
+		Intent intent = new Intent(this, OknoPomoc.class);
 	    startActivity(intent);
 	}
 
