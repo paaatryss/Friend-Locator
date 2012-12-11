@@ -10,72 +10,68 @@
     android:layout_gravity="center" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button_znajomi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:onClick="znajomi"
         android:layout_below="@+id/textView1"
         android:text="@string/button_znajomi" />
-
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_autorzy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button1"
-        android:text="@string/button_przelacz_widok" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/button2"
+        android:onClick="autorzy"
+        android:layout_below="@id/button_zaproszenia"
         android:text="@string/button_autorzy" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button_zaproszenia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button3"
-        android:text="@string/button_about" />
+        android:layout_below="@id/button_znajomi"
+        android:onClick="zaproszenia"
+        android:text="@string/button_zaproszenia" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button_ustawienia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button4"
+        android:onClick="ustawienia"
+        android:layout_below="@id/button_autorzy"
         android:text="@string/button_ustawienia" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button_pomoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="pomoc"
-        android:layout_below="@id/button5"
+        android:layout_below="@id/button_ustawienia"
         android:text="@string/button_pomoc" />
     
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/button_powrot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="powrot"
-        android:layout_below="@id/button6"
+        android:layout_below="@id/button_pomoc"
         android:text="@string/button_powrot" />
     
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/button_wyloguj"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button7"
+        android:layout_below="@id/button_powrot"
         android:onClick="wyloguj"
         android:text="@string/button_wyloguj" />
 
      <Button
-         android:id="@+id/button9"
+         android:id="@+id/button_wyjdz"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_alignParentLeft="true"
          android:layout_alignParentRight="true"
-         android:layout_below="@id/button8"
+         android:layout_below="@id/button_wyloguj"
          android:text="@string/button_wyjdz" />
 
      <TextView

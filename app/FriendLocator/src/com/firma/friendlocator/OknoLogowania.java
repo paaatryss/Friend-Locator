@@ -21,8 +21,8 @@ public class OknoLogowania extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (android.os.Build.VERSION.SDK_INT > 9) {
-		      StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-		      StrictMode.setThreadPolicy(policy);
+		      //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+		      //StrictMode.setThreadPolicy(policy);
 		   }
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
@@ -38,7 +38,8 @@ public class OknoLogowania extends Activity {
     	final EditText passwordField = (EditText) findViewById(R.id.text_haslo);  
     	String haslo = passwordField.getText().toString();   
     	
-    	check = Auth.login(login,haslo);
+    	//check = Auth.login(login,haslo);
+    	check=0;
     	if(check==0){
     		Intent intent = new Intent(this, OknoMenu.class);
     	    startActivity(intent);

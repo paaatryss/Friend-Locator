@@ -30,5 +30,21 @@ public class OknoMenuGlowne extends Activity {
 		Intent intent = new Intent(this, OknoPomoc.class);
 	    startActivity(intent);
 	}
+	public void ustawienia(View view){
+		Intent intent = new Intent(this, OknoUstawienia.class);
+	    startActivity(intent);
+	}
+	public void zaproszenia(View view){
+		Intent intent = new Intent(this, OknoZaproszenia.class);
+	    startActivity(intent);
+	}
+	public void autorzy(View view){
+		Intent intent = new Intent(this, OknoAutorzy.class);
+	    startActivity(intent);
+	}
+	public void znajomi(View view){
+		Intent intent = new Intent(this, OknoZnajomi.class);
+	    startActivity(intent);
+	}
 
 }
