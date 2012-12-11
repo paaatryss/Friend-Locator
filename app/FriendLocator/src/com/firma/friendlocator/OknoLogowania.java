@@ -4,6 +4,7 @@ package com.firma.friendlocator;
 import com.firma.friendlocator.R;
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +20,10 @@ public class OknoLogowania extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		if (android.os.Build.VERSION.SDK_INT > 9) {
+		      StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+		      StrictMode.setThreadPolicy(policy);
+		   }
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -32,6 +37,7 @@ public class OknoLogowania extends Activity {
     	String login = loginField.getText().toString(); 
     	final EditText passwordField = (EditText) findViewById(R.id.text_haslo);  
     	String haslo = passwordField.getText().toString();   
+    	
     	check = Auth.login(login,haslo);
     	if(check==0){
     		Intent intent = new Intent(this, OknoMenu.class);
