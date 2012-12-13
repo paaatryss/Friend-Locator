@@ -18,20 +18,19 @@
         android:layout_below="@+id/textView1"
         android:text="@string/button_znajomi" />
     <Button
-        android:id="@+id/button_autorzy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="autorzy"
-        android:layout_below="@id/button_zaproszenia"
-        android:text="@string/button_autorzy" />
-
-    <Button
         android:id="@+id/button_zaproszenia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/button_znajomi"
         android:onClick="zaproszenia"
         android:text="@string/button_zaproszenia" />
+    <Button
+        android:id="@+id/button_autorzy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="autorzy"
+        android:layout_below="@id/button_zaproszenia"
+        android:text="@string/button_autorzy" />
 
     <Button
         android:id="@+id/button_ustawienia"
