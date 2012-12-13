@@ -1,6 +1,5 @@
 *.class
 bin/
-gen/
 
 # Package Files #
 *.war
