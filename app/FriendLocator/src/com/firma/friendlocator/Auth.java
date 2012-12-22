@@ -16,7 +16,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-class Auth {
+public class Auth {
 	static public int login(String login,String haslo){
 		 StringBuilder builder = new StringBuilder();
 		    HttpClient client = new DefaultHttpClient();

@@ -19,7 +19,7 @@ public final class R {
     public static final class id {
         public static final int Haslo=0x7f050000;
         public static final int HasloPowtorz=0x7f050001;
-        public static final int button_autorzy=0x7f05000c;
+        public static final int button_autorzy=0x7f05000d;
         public static final int button_menu=0x7f05000a;
         public static final int button_pomoc=0x7f05000f;
         public static final int button_powrot=0x7f050010;
@@ -29,7 +29,7 @@ public final class R {
         public static final int button_wyslij=0x7f050019;
         public static final int button_zaloguj=0x7f050006;
         public static final int button_zapomnialem=0x7f050008;
-        public static final int button_zaproszenia=0x7f05000d;
+        public static final int button_zaproszenia=0x7f05000c;
         public static final int button_zarejestruj=0x7f050007;
         public static final int button_zarejestruj_rejestracja=0x7f050016;
         public static final int button_znajomi=0x7f05000b;
