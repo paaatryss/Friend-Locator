@@ -36,14 +36,6 @@ class Auth{
 	}
 	
 	/**
-	 * Podtrzymuje obecny token dla użytkownika
-	 */
-	private function feedToken($userid, $token)
-	{
-		
-	}
-	
-	/**
 	 * Sprawdza czy dany token jest ważny
 	 */
 	private function checkToken($userid, $token)

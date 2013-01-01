@@ -3,9 +3,8 @@
 require_once 'db.class.php';
 require_once 'auth.class.php';
 
-$login = $_GET['login'];
-$password = $_GET['password'];
-
+$login = mysql_real_escape_string($_GET['login']);
+$password = mysql_real_escape_string($_GET['password']);
 
 $auth = new Auth();
 
