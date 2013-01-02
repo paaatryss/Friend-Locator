@@ -6,6 +6,12 @@ require_once 'auth.class.php';
 $login = mysql_real_escape_string($_GET['login']);
 $password = mysql_real_escape_string($_GET['password']);
 
+if(empty($login) || empty($password) )
+{
+	$response = Array('error' => 1);
+	echo json_encode($response);
+	die();
+}
 $auth = new Auth();
 
 $ret = $auth->login($login, $password);

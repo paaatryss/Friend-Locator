@@ -14,9 +14,9 @@ class Auth{
 		$query = "SELECT id FROM baza70_friendlocator.users WHERE login='".$login."' AND password='".$db_pass."'";
 		$ret = $db->fetch_array($query);
 		
-		if(!empty($ret[0][id])>0)
+		if(!empty($ret['0']['id'])>0)
 		{
-			return $this->setToken($ret[0][id]);
+			return $this->setToken($ret['0']['id']);
 		}
 		else 
 			return FALSE;

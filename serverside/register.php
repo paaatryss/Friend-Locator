@@ -7,11 +7,18 @@ $login = mysql_real_escape_string($_GET['login']);
 $password = mysql_real_escape_string($_GET['password']);
 $email = mysql_real_escape_string($_GET['email']);
 
+if(empty($login) || empty($password) || empty($email))
+{
+	$response = Array('error' => 1);
+	echo json_encode($response);
+	die();
+}
+
 $reg = new Register();
 
-$ret = $ret->register($login, $email, $password);
+$ret = $reg->doregister($login, $email, $password);
 
-if($ret!=FALSE)
+if($ret==0)
 {
 	$response = Array('error' => '0');
 	echo json_encode($response);
