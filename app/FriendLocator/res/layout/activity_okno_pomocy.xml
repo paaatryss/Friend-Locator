@@ -12,4 +12,11 @@
         android:text="@string/text_pomoc"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="send"
+        android:text="@string/button_wyslij_email" />
+
 </LinearLayout>

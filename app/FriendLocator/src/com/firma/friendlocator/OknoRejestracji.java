@@ -14,15 +14,6 @@ import android.widget.Toast;
 
 public class OknoRejestracji extends Activity {
 	Context context;
-
-	/*EditText loginField = (EditText) findViewById(R.id.text_login_rejestracja);  
-	String login = loginField.getText().toString();  
-	final EditText passwordField = (EditText) findViewById(R.id.Haslo);  
-	String haslo = passwordField.getText().toString();   
-	final EditText emailField = (EditText) findViewById(R.id.Haslo);  
-	String email = emailField.getText().toString();
-	final EditText email2Field = (EditText) findViewById(R.id.Haslo);  
-	String email2 = email2Field.getText().toString(); */
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,16 +23,16 @@ public class OknoRejestracji extends Activity {
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_okno_rejestracji);
     }
-    
-    public void login(View button) {
-    	int check;
-    	EditText loginField = (EditText) findViewById(R.id.text_login_rejestracja);  
-    	String login = loginField.getText().toString(); 
-    	final EditText passwordField = (EditText) findViewById(R.id.text_haslo_rejestracja);  
-    	String haslo = passwordField.getText().toString();
-    	final EditText emailField = (EditText) findViewById(R.id.text_email_rejestracja);  
-    	String email = emailField.getText().toString();
-    	check = Auth.register(login,haslo,email);
+    int check;
+    public void login(View button) {  
+    	EditText loginField = (EditText) findViewById(R.id.text_login_rejestracja);
+    	final EditText passwordField = (EditText) findViewById(R.id.text_haslo_rejestracja);
+    	final EditText emailField = (EditText) findViewById(R.id.text_email_rejestracja);
+    	String login = loginField.getText().toString();  
+    	String haslo = passwordField.getText().toString();     
+    	String email = emailField.getText().toString(); 
+    	//check = Auth.register(login,haslo,email);
+    	check=0;
     	if(check==0){
     		Intent intent = new Intent(this, OknoMenu.class);
     	    startActivity(intent);

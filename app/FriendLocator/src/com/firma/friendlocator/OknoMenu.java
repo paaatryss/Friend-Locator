@@ -17,10 +17,13 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
 
 public class OknoMenu extends MapActivity {
-	private MapView mapView;
+	public static MapView mapView;
+	public static int i=1;
 
 	private static final int latitudeE6 = 37985339;
 	private static final int longitudeE6 = 23716735;
+	
+	Boolean value1=false;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,12 @@ public class OknoMenu extends MapActivity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_okno_menu);
+		Bundle extras = getIntent().getExtras();
+	    if (extras == null) {
+	    }
+	    else{
+	    	value1 = extras.getBoolean("Value1");
+	    }
 		mapView = (MapView) findViewById(R.id.map_view);
 		mapView.setBuiltInZoomControls(true);
 
@@ -36,18 +45,29 @@ public class OknoMenu extends MapActivity {
 		Drawable drawable = this.getResources().getDrawable(R.drawable.google);
 		CustomItemizedOverlay itemizedOverlay = new CustomItemizedOverlay(
 				drawable, this);
+		CustomItemizedOverlay itemizedOverlay2 = new CustomItemizedOverlay(
+				drawable, this);
 
 		GeoPoint point = new GeoPoint(latitudeE6, longitudeE6);
+		GeoPoint point2 = new GeoPoint(latitudeE6+1000, longitudeE6+1000);
 		OverlayItem overlayitem = new OverlayItem(point, "Hello",
 				"I'm in Athens, Greece!");
+		OverlayItem overlayitem2 = new OverlayItem(point2, "siemanko",
+				"2 znajomy");
 
 		itemizedOverlay.addOverlay(overlayitem);
+		itemizedOverlay2.addOverlay(overlayitem2);
 		mapOverlays.add(itemizedOverlay);
+		mapOverlays.add(itemizedOverlay2);
 
 		MapController mapController = mapView.getController();
 
-		mapController.animateTo(point);
+		mapController.animateTo(point2);
 		mapController.setZoom(10);
+		//mapView.setSatellite(true);
+        mapView.setStreetView(!value1);
+        mapView.setSatellite(value1);
+        mapView.invalidate();
 
 	}
 

@@ -33,11 +33,19 @@
         android:text="@string/button_autorzy" />
 
     <Button
+        android:id="@+id/button_zmien_widok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="zmien"
+        android:layout_below="@id/button_autorzy"
+        android:text="@string/button_zmien_widok" />
+    
+    <Button
         android:id="@+id/button_ustawienia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="ustawienia"
-        android:layout_below="@id/button_autorzy"
+        android:layout_below="@id/button_zmien_widok"
         android:text="@string/button_ustawienia" />
 
     <Button

@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import com.firma.friendlocator.OknoMenu;
 
 public class OknoMenuGlowne extends Activity {
+	static int i=0;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -24,6 +26,18 @@ public class OknoMenuGlowne extends Activity {
 	public void powrot(View view){
 		finish();
 		Intent intent = new Intent(this, OknoMenu.class);
+	    startActivity(intent);
+	}
+	public void zmien(View view){
+		Intent intent = new Intent(this, OknoMenu.class);
+		if(i==0){
+		intent.putExtra("Value1", true);
+		i=1;
+		}
+		else{
+		intent.putExtra("Value1", false);
+		i=0;
+		}
 	    startActivity(intent);
 	}
 	public void pomoc(View view){

@@ -12,4 +12,12 @@
         android:text="@string/button_znajomi"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:id="@+id/button_dodaj"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:onClick="dodaj"
+        android:text="@string/button_dodaj" />
+
 </LinearLayout>

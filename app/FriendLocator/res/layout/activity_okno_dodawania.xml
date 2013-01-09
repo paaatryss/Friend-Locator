@@ -3,27 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+    
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/button_ustawienia"
+        android:text="@string/button_dodaj"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        android:id="@+id/button_zmiana_hasla"
+    <EditText
+        android:id="@+id/text_email_znajomy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="zmiana"
-        android:text="@string/button_zmien_haslo" />
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress" />
 
     <Button
-        android:id="@+id/button_zmien_email"
-        android:layout_width="match_parent"
+        android:id="@+id/button_dodaj_znajomy"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="zmianaemail"
-        android:text="@string/button_zmien_email" />
+        android:layout_gravity="center"
+        android:onClick="add"
+        android:text="@string/button_dodaj" />
 
 </LinearLayout>

@@ -30,5 +30,15 @@
     <string name="button_przelacz_widok">Przełącz widok</string>
     <string name="text_pomoc">Pomoc</string>
     <string name="button_zaproszenia">Zaproszenia</string>
+    <string name="button_zmien_widok">Zmień widok</string>
+    <string name="button_dodaj">Dodaj</string>
+    <string name="button_zmien_haslo">Zmień hasło</string>
+    <string name="text_stare_haslo">Stare hasło</string>
+    <string name="text_nowe_haslo">Nowe hasło</string>
+    <string name="button_zmien">Zamień</string>
+    <string name="button_zmien_email">Zmień email</string>
+    <string name="button_wyslij_email">Wyślij do nas maila</string>
+    <string name="text_tresc">Treść</string>
+    <string name="text_tytul">Tytuł</string>
 
 </resources>
