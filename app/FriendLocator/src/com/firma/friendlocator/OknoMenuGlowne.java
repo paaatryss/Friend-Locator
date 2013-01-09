@@ -1,5 +1,6 @@
 package com.firma.friendlocator;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import com.firma.friendlocator.OknoMenu;
+import com.google.android.maps.MapView;
 
 public class OknoMenuGlowne extends Activity {
 	static int i=0;
@@ -24,7 +26,6 @@ public class OknoMenuGlowne extends Activity {
 	    startActivity(intent);
 	}
 	public void powrot(View view){
-		finish();
 		Intent intent = new Intent(this, OknoMenu.class);
 	    startActivity(intent);
 	}
@@ -55,6 +56,10 @@ public class OknoMenuGlowne extends Activity {
 	public void autorzy(View view){
 		Intent intent = new Intent(this, OknoAutorzy.class);
 	    startActivity(intent);
+	}
+	@SuppressLint("NewApi")
+	public void wyjdz(View view){
+		finishAffinity();
 	}
 	public void znajomi(View view){
 		Intent intent = new Intent(this, OknoZnajomi.class);
