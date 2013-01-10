@@ -74,7 +74,9 @@ public class OknoZnajomi extends Activity{
 		lista1.setClickable(true);
 		
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
+		lista1.setAdapter(adapter);
 	}
+	
 	
 	public void dodaj(View view) {
 		Intent intent = new Intent(this, OknoDodawania.class);
