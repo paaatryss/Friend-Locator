@@ -7,7 +7,9 @@
     <uses-sdk
         android:minSdkVersion="7"
         android:targetSdkVersion="16" />
-	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission
+	    android:name="android.permission.INTERNET" >
+	</uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -19,7 +21,8 @@
         
         <activity
             android:name="com.firma.friendlocator.OknoLogowania"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,42 +31,43 @@
         </activity>
         <activity
             android:name="com.firma.friendlocator.OknoZmianaEmail"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.firma.friendlocator.OknoWyslijEmail"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.firma.friendlocator.OknoZmianaHasla"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name="com.firma.friendlocator.OknoMenu"
-                  android:label="@string/app_name">
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
                 <activity
             android:name="com.firma.friendlocator.OknoDodawania"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -72,7 +76,8 @@
         
         <activity
             android:name="com.firma.friendlocator.OknoRejestracji"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -80,7 +85,8 @@
         
         <activity
             android:name="com.firma.friendlocator.OknoZapomnialemDanych"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -88,12 +94,13 @@
                 <activity
             android:name="com.firma.friendlocator.OknoMenuGlowne"
             android:label="@string/app_name" 
-             >
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
          <activity
+            android:windowSoftInputMode="stateHidden"
             android:name="com.firma.friendlocator.OknoPomoc"
             android:label="@string/app_name" >
             <intent-filter>
@@ -101,6 +108,7 @@
             </intent-filter>
         </activity>
          <activity
+            android:windowSoftInputMode="stateHidden"
             android:name="com.firma.friendlocator.OknoUstawienia"
             android:label="@string/app_name" >
             <intent-filter>
@@ -108,6 +116,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:windowSoftInputMode="stateHidden"
             android:name="com.firma.friendlocator.OknoZaproszenia"
             android:label="@string/app_name" >
             <intent-filter>
@@ -115,6 +124,7 @@
             </intent-filter>
         </activity>
                 <activity
+            android:windowSoftInputMode="stateHidden"
             android:name="com.firma.friendlocator.OknoAutorzy"
             android:label="@string/app_name" >
             <intent-filter>
@@ -122,6 +132,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:windowSoftInputMode="stateHidden"
             android:name="com.firma.friendlocator.OknoZnajomi"
             android:label="@string/app_name" >
             <intent-filter>
@@ -129,5 +140,4 @@
             </intent-filter>
         </activity>
     </application>
-	
 </manifest>
