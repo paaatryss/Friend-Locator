@@ -20,18 +20,18 @@ public class OknoZnajomi extends Activity{
 	private ArrayAdapter<String> adapter;
 	
 	protected void onCreate(Bundle savedInstanceState) {		
-		Friend test1 = new Friend("login1", 123, 123, 1);
-		Friend test2 = new Friend("login2", 456, 456, 2);
-		Friend test3 = new Friend("login1", 123, 123, 1);
-		Friend test4 = new Friend("login2", 456, 456, 2);	
-		Friend test5 = new Friend("login1", 123, 123, 1);
-		Friend test6 = new Friend("login2", 456, 456, 2);
-		Friend test7 = new Friend("login1", 123, 123, 1);
-		Friend test8 = new Friend("login2", 456, 456, 2);
-		Friend test9 = new Friend("login1", 123, 123, 1);
-		Friend test10 = new Friend("login2", 456, 456, 2);	
-		Friend test11 = new Friend("login1", 123, 123, 1);
-		Friend test12 = new Friend("login2", 456, 456, 2);
+		Friend test1 = new Friend("login1", "test", 123, 123, 1);
+		Friend test2 = new Friend("login2", "test",456, 456, 2);
+		Friend test3 = new Friend("login1", "test",123, 123, 1);
+		Friend test4 = new Friend("login2", "test",456, 456, 2);	
+		Friend test5 = new Friend("login1", "test",123, 123, 1);
+		Friend test6 = new Friend("login2", "test",456, 456, 2);
+		Friend test7 = new Friend("login1", "test",123, 123, 1);
+		Friend test8 = new Friend("login2", "test",456, 456, 2);
+		Friend test9 = new Friend("login1", "test",123, 123, 1);
+		Friend test10 = new Friend("login2", "test",456, 456, 2);	
+		Friend test11 = new Friend("login1", "test",123, 123, 1);
+		Friend test12 = new Friend("login2", "test",456, 456, 2);
 		
 		
 		test1.setName("Marian");

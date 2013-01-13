@@ -16,10 +16,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
+
 public class Auth {
-	static public int login(String login,String haslo){
+	static public String login(String login,String haslo){
 		 StringBuilder builder = new StringBuilder();
 		    HttpClient client = new DefaultHttpClient();
+		    Log.d("info:", "0");
 		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/login.php?login=" + login + "&password=" + haslo);
 		    try {
 			      HttpResponse response = client.execute(httpGet);
@@ -34,7 +37,7 @@ public class Auth {
       		          builder.append(line + "\n");
       		        }
       		      } else {
-      		        	return 2;
+      		        	return "2";
       		      }
 			    } catch (ClientProtocolException e) {
 			      e.printStackTrace();
@@ -42,18 +45,23 @@ public class Auth {
 			      e.printStackTrace();
 			    }
 			    try{
-			    	JSONObject jArray = new JSONObject(builder.toString());
-			    	JSONArray error = jArray.getJSONArray("error");
-			    	if(error.length() == 0)
+			    	Log.d("info:", "1");
+			    	JSONObject jObject = new JSONObject(builder.toString());
+			    	Log.d("info:", "2");
+			    	int error = jObject.getInt("error");
+			    	Log.d("info:", Integer.toString(error));
+			    	if(error != 1)
 			    	{
-			    		JSONArray token = jArray.getJSONArray("token");
-			    				return 0;
+			    		Log.d("info:", "4");
+			    		String token = jObject.getString("token");
+			    		Log.d("info:", "5");
+			    				return token;
 			    	}
-			    	
+			    	Log.d("info:", "6");
 			    }catch(JSONException e){
-			    		    return 0;
+			    		    return "0";
 			    }
-			  return 1;
+			  return "1";
 	}
 	static public int register(String login,String haslo,String email){
 		return 0;

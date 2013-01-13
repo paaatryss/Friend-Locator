@@ -11,9 +11,10 @@ public class Friend {
 	  
 	  public ArrayList<Friend> friends = new ArrayList<Friend>();
 
-	public Friend(String login, int latitude, int longitude, int id){
+	public Friend(String login, String name, int latitude, int longitude, int id){
 		this.id = id;
 		this.login = login;
+		this.name = name;
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}

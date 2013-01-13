@@ -21,8 +21,8 @@ public class OknoLogowania extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (android.os.Build.VERSION.SDK_INT > 9) {
-		      //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-		      //StrictMode.setThreadPolicy(policy);
+		      StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+		      StrictMode.setThreadPolicy(policy);
 		   }
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
@@ -32,24 +32,23 @@ public class OknoLogowania extends Activity {
 	}
 	
 	public void zaloguj(View view) {
-		int check;
+		String check;
 		EditText loginField = (EditText) findViewById(R.id.text_login);  
     	String login = loginField.getText().toString(); 
     	final EditText passwordField = (EditText) findViewById(R.id.text_haslo);  
     	String haslo = passwordField.getText().toString();   
     	
-    	//check = Auth.login(login,haslo);
-    	check=0;
-    	if(check==0){
+    	check = Auth.login(login,haslo);
+    	if(check.equals("0")){
     		Intent intent = new Intent(this, OknoMenu.class);
     	    startActivity(intent);
     	}
-    	else if(check == 1){
+    	else if(check.equals("1")){
     		context = getApplicationContext();
     		Toast.makeText(context, "niepopoprawny login bπdü has≥o!", Toast.LENGTH_LONG).show();
     		
     	}
-    	else if(check == 2){
+    	else if(check.equals("2")){
     		context = getApplicationContext();
     		Toast.makeText(context, "b≥πs po≥πczenia!", Toast.LENGTH_LONG).show();
     	}
