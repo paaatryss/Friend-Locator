@@ -47,9 +47,9 @@ public class Auth {
 			    try{
 			    	Log.d("info:", "1");
 			    	JSONObject jObject = new JSONObject(builder.toString());
-			    	Log.d("info:", "2");
-			    	int error = jObject.getInt("error");
-			    	Log.d("info:", Integer.toString(error));
+			    	Log.d("info:", "3");
+			    	int error = jObject.optInt("error");
+			    	Log.d("info:", "error: " + error);
 			    	if(error != 1)
 			    	{
 			    		Log.d("info:", "4");
@@ -59,7 +59,7 @@ public class Auth {
 			    	}
 			    	Log.d("info:", "6");
 			    }catch(JSONException e){
-			    		    return "0";
+			    		return "1";
 			    }
 			  return "1";
 	}

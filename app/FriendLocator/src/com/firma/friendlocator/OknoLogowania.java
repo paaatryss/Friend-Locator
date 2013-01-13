@@ -8,6 +8,7 @@ import android.os.StrictMode;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -39,11 +40,8 @@ public class OknoLogowania extends Activity {
     	String haslo = passwordField.getText().toString();   
     	
     	check = Auth.login(login,haslo);
-    	if(check.equals("0")){
-    		Intent intent = new Intent(this, OknoMenu.class);
-    	    startActivity(intent);
-    	}
-    	else if(check.equals("1")){
+    	Log.d("info", "login zwraca:"+check);
+    	if(check.equals("1")){
     		context = getApplicationContext();
     		Toast.makeText(context, "niepopoprawny login bπdü has≥o!", Toast.LENGTH_LONG).show();
     		
@@ -53,8 +51,8 @@ public class OknoLogowania extends Activity {
     		Toast.makeText(context, "b≥πs po≥πczenia!", Toast.LENGTH_LONG).show();
     	}
     	else{
-    		context = getApplicationContext();
-    		Toast.makeText(context, "error "+check +"!", Toast.LENGTH_LONG).show();
+    		Intent intent = new Intent(this, OknoMenu.class);
+    	    startActivity(intent);
     	}
 	}
         

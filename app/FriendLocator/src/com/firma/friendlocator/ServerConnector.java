@@ -17,6 +17,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
+
 public class ServerConnector {
 	private String token;
 	
@@ -24,14 +26,17 @@ public class ServerConnector {
 	{
 		this.token = token;
 	}
-	public ArrayList<Friend> GetFriends(String login,String haslo){
+	
+	public ArrayList<Friend> GetFriends(){
 		 StringBuilder builder = new StringBuilder();
 		    HttpClient client = new DefaultHttpClient();
 		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=getfrlocation&token=" + this.token);
+		    Log.d("ServerConnector", "1");
 		    try {
 			      HttpResponse response = client.execute(httpGet);
 			      StatusLine statusLine = response.getStatusLine();
 			      int statusCode = statusLine.getStatusCode();
+			      Log.d("ServerConnector", "2");
      		      if (statusCode == 200) {
      		        HttpEntity entity = response.getEntity();
      		        InputStream content = entity.getContent();
@@ -43,29 +48,28 @@ public class ServerConnector {
      		      } else {
      		        	return new ArrayList<Friend>();
      		      }
+     		     Log.d("ServerConnector", "3");
 			    } catch (ClientProtocolException e) {
 			      e.printStackTrace();
 			    } catch (IOException e) {
 			      e.printStackTrace();
 			    }
 			    try{
-			    	JSONObject jArray = new JSONObject(builder.toString());
-			    	JSONArray error = jArray.getJSONArray("error");
-			    	if(error.length() == 0)
-			    	{
-			    		ArrayList<Friend> friends = new ArrayList<Friend>();
-			    		JSONArray friendjarray = jArray.getJSONArray("friends");
-			    		for(int i = 0; i < friendjarray.length(); i++){
-			    			JSONObject rec = friendjarray.getJSONObject(i);
+			    	Log.d("ServerConnector", "4");
+			    	JSONArray jArray = new JSONArray(builder.toString());
+			    	Log.d("ServerConnector", "przed pobraniem");
+			    	ArrayList<Friend> friends = new ArrayList<Friend>();
+			    	Log.d("ServerConnector", "friendjarray.length() " + Integer.toString(jArray.length()));
+			    		
+			    	for(int i = 0; i < jArray.length(); i++){
+			    			JSONObject rec = jArray.getJSONObject(i);
+			    			Log.d("importuje friend", rec.getString("login"));
 			    			Friend friend = new Friend(rec.getString("email"), rec.getString("login"), rec.getInt("lat"), rec.getInt("lng"), rec.getInt("id"));
 			    			friends.add(friend);
-			    		}
-			    		return friends;
 			    	}
-			    	
+			    	return friends;
 			    }catch(JSONException e){
 			    		    return new ArrayList<Friend>();
 			    }
-			  return new ArrayList<Friend>();
 	}
 }
