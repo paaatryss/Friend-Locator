@@ -46,7 +46,7 @@ public final class R {
         public static final int listView1=0x7f05002b;
         public static final int map_view=0x7f05000b;
         public static final int menu_settings=0x7f05002d;
-        public static final int mytext=0x7f05000d;
+        public static final int spinner1=0x7f05000d;
         public static final int textView1=0x7f050002;
         public static final int textView2=0x7f05001e;
         public static final int textView3=0x7f050020;

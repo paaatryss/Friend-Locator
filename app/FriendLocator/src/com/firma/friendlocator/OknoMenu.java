@@ -15,6 +15,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.firma.friendlocator.R;
@@ -24,7 +28,16 @@ import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
 
-public class OknoMenu extends MapActivity {
+public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelectedListener*/ {
+	
+/*	public TextView selection;
+	public ListView items;
+	public ArrayList<String> listItems = new ArrayList<String>();
+	public Spinner spin;
+	public ArrayAdapter aa;
+	public String[] items1; */
+	
+	ArrayList<Friend> friends;
 	public static MapView mapView;
 	public static int i=1;
 	public static int ch=0;
@@ -38,7 +51,7 @@ public class OknoMenu extends MapActivity {
 	double longitude,longitudeold;
 	
 	public LocationManager locmgr = null;
-	public TextView mytext;
+	//public TextView mytext;
 	
 	Boolean value1=false;
 	GeoPoint pointme;
@@ -52,7 +65,7 @@ public class OknoMenu extends MapActivity {
         public void onLocationChanged(Location loc) {
             //sets and displays the lat/long when a location is provided
             String latlong = "Moja Lokacja: " + loc.getLatitude() + ", " + loc.getLongitude();   
-            mytext.setText(latlong);
+            //mytext.setText(latlong);
             latitudeold=latitude;
             longitudeold=longitude;
             latitude = loc.getLatitude();
@@ -117,16 +130,27 @@ public class OknoMenu extends MapActivity {
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 		setContentView(R.layout.activity_okno_menu);
-	
-		mytext = (TextView) findViewById(R.id.mytext);
+/*		Log.d("onCreate", "0");
+		spin = (Spinner) findViewById(R.id.spinner1);
+		Log.d("onCreate", "1");
+		spin.setOnItemSelectedListener(this);
+		Log.d("onCreate", "2");
+		this.aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, items1);
+		Log.d("onCreate", "3");
+		aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		Log.d("onCreate", "4");
+		spin.setAdapter(aa);
+		Log.d("onCreate", "5"); */
+		
+		//mytext = (TextView) findViewById(R.id.mytext);
         
         //grab the location manager service
         locmgr = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
   
-        mytext.setText("Oczekiwanie na lokalizacje");
+        //mytext.setText("Oczekiwanie na lokalizacje");
         
 		ServerConnector test = new ServerConnector("c576526171df6f92db16fc1c2cbf1dc0");
-		ArrayList<Friend> friends = new ArrayList<Friend>();
+		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		Bundle extras = getIntent().getExtras();
 	    if (extras == null) {
@@ -145,6 +169,7 @@ public class OknoMenu extends MapActivity {
 		{
 			Friend fr = friends.get(i);
 			Log.d("latiutude", Integer.toString(fr.getLatitude()));
+			/*items1[i] = (fr.getName() + ", " + fr.getLogin());*/
 			CustomItemizedOverlay itemizedOverlay = new CustomItemizedOverlay(
 					drawable, this);
 			GeoPoint point = new GeoPoint(fr.getLatitude(), fr.getLongitude());
@@ -192,4 +217,12 @@ public class OknoMenu extends MapActivity {
 	    Intent intent = new Intent(this, OknoMenuGlowne.class);
 	    startActivity(intent);
 	}
+	
+/*	public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+		selection.setText(items1[position]);
+	}
+
+	public void onNothingSelected(AdapterView<?> parent) {
+		selection.setText("Znajomi");
+	} */
 }
