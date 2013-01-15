@@ -15,7 +15,7 @@
      android:layout_alignParentLeft="true"
      android:layout_alignParentRight="true"
      android:layout_below="@+id/button_menu"
-     android:apiKey="0tyavlpZIin99sFFSxQsLD_PfBQ_inoVTtHh8Pw"
+     android:apiKey="0WyShXr4D8NFF1G9uSBC8uzui5Rzpk44fS0ayLg"
      android:clickable="true"
      android:enabled="true" />
 
@@ -28,5 +28,15 @@
      android:minHeight="30dp"
      android:onClick="menu"
      android:text="@string/menu" />
+
+ <TextView
+     android:id="@+id/mytext"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignBaseline="@+id/button_menu"
+     android:layout_alignBottom="@+id/button_menu"
+     android:layout_alignParentRight="true"
+     android:layout_marginRight="31dp"
+     android:text="TextView" />
 
 </RelativeLayout>

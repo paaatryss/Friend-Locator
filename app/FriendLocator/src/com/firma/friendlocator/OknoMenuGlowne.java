@@ -32,11 +32,11 @@ public class OknoMenuGlowne extends Activity {
 	public void zmien(View view){
 		Intent intent = new Intent(this, OknoMenu.class);
 		if(i==0){
-		intent.putExtra("Value1", true);
+		intent.putExtra("Value1", false);
 		i=1;
 		}
 		else{
-		intent.putExtra("Value1", false);
+		intent.putExtra("Value1", true);
 		i=0;
 		}
 	    startActivity(intent);
