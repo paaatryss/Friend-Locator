@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,18 +29,18 @@ public class OknoMenuGlowne extends Activity {
 	}
 	public void powrot(View view){
 		Intent intent = new Intent(this, OknoMenu.class);
+
 	    startActivity(intent);
 	}
 	public void zmien(View view){
 		Intent intent = new Intent(this, OknoMenu.class);
-		if(i==0){
-		intent.putExtra("Value1", false);
-		i=1;
+		if(OknoMenu.value1==true){
+		OknoMenu.value1=false;
 		}
 		else{
-		intent.putExtra("Value1", true);
-		i=0;
+			OknoMenu.value1=true;
 		}
+		OknoMenu.change();
 	    startActivity(intent);
 	}
 	public void pomoc(View view){
@@ -47,7 +49,8 @@ public class OknoMenuGlowne extends Activity {
 	}
 	public void ustawienia(View view){
 		Intent intent = new Intent(this, OknoUstawienia.class);
-	    startActivity(intent);
+		startActivity(intent);
+
 	}
 	public void zaproszenia(View view){
 		Intent intent = new Intent(this, OknoZaproszenia.class);

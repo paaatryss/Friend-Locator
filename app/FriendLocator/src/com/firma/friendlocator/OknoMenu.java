@@ -3,15 +3,18 @@ package com.firma.friendlocator;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,6 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firma.friendlocator.R;
 import com.google.android.maps.GeoPoint;
@@ -47,14 +51,14 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	double lat=0;
 	double lon=0;
 	
-	double latitude,latitudeold;
-	double longitude,longitudeold;
+	static double latitude,latitudeold;
+	static double longitude,longitudeold;
 	
 	public LocationManager locmgr = null;
 	//public TextView mytext;
 	
-	Boolean value1=false;
-	GeoPoint pointme;
+	static Boolean value1=false;
+	public static GeoPoint pointme=null;
 	
 	protected boolean isRouteDisplayed() {
 		return false;
@@ -98,9 +102,9 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     @Override
     public void onResume() {
         super.onResume();
-        locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,10000.0f,onLocationChange);
+        locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,10000.0f,onLocationChange);
     }
-	CustomItemizedOverlay meold=null;
+    static CustomItemizedOverlay meold=null;
     public void update(){
     	MapController mapController = mapView.getController();
     	List mapOverlays = mapView.getOverlays();
@@ -108,20 +112,27 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     		mapOverlays.remove(meold);
     	}
     	Drawable drawable = this.getResources().getDrawable(R.drawable.map_point);
-    	CustomItemizedOverlay me = new CustomItemizedOverlay(drawable, this);
-    	GeoPoint pointme = new GeoPoint((int) (latitude*1e6), (int) (longitude*1e6));
-		OverlayItem mee = new OverlayItem(pointme, "Me", "I'm here");
+    	CustomItemizedOverlay me = new CustomItemizedOverlay(
+				drawable, this);
+    	 pointme = new GeoPoint((int) (latitude*1e6), (int) (longitude*1e6));
+		OverlayItem mee = new OverlayItem(pointme, "Me",
+				"I'm hear");
 		me.addOverlay(mee);
 		mapOverlays.add(me);
 		if(ch==0){
 			ch=1;
-			mapController.animateTo(pointme);
-			mapController.setZoom(18);
+		mapController.animateTo(pointme);
 		}
 		meold=me;
-    	
+		mapView.invalidate();	
     }
-    
+    public static void change(){
+    	
+    		
+        mapView.setStreetView(!value1);
+        mapView.setSatellite(value1);
+        mapView.invalidate();
+    }
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -152,19 +163,13 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 		ServerConnector test = new ServerConnector("c576526171df6f92db16fc1c2cbf1dc0");
 		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
-		Bundle extras = getIntent().getExtras();
-	    if (extras == null) {
-	    }
-	    else{
-	    	value1 = extras.getBoolean("Value1");
-	    }
+		
 		mapView = (MapView) findViewById(R.id.map_view);
 		mapView.setBuiltInZoomControls(true);
 		
 		Drawable drawable = this.getResources().getDrawable(R.drawable.google); /**/
 		List mapOverlays = mapView.getOverlays();
 		Log.d("ilosc znajomych", Integer.toString(friends.size()));
-		GeoPoint point10 = null;
 		for(int i=0; i<friends.size(); i++)
 		{
 			Friend fr = friends.get(i);
@@ -178,11 +183,6 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 			itemizedOverlay.addOverlay(overlayitem);
 			mapOverlays.add(itemizedOverlay);
 			MapController mapController = mapView.getController();
-			mapController.animateTo(point);
-			if(i==1){
-				Log.d("wlaz³em", Integer.toString(fr.getLatitude()));
-				point10 = new GeoPoint(fr.getLatitude(), fr.getLongitude());
-			}
 		}
 		CustomItemizedOverlay itemizedOverlay = new CustomItemizedOverlay(
 				drawable, this);
@@ -191,6 +191,22 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 		Log.d("moja lokalizacja", Double.toString(longitude));
 		GeoPoint point = new GeoPoint(latitudeE6, longitudeE6);
 		GeoPoint point2 = new GeoPoint(40453046, -3688445);
+		
+		if(pointme!=null){
+			if(meold!=null){
+	    		mapOverlays.remove(meold);
+	    	}
+			Drawable drawableme = this.getResources().getDrawable(R.drawable.map_point);
+	    	CustomItemizedOverlay me = new CustomItemizedOverlay(
+					drawableme, this);
+	    	 pointme = new GeoPoint((int) (latitude*1e6), (int) (longitude*1e6));
+			OverlayItem mee = new OverlayItem(pointme, "Me",
+					"I'm hear");
+			me.addOverlay(mee);
+			mapOverlays.add(me);
+			meold=me;
+			
+		}
 
 		OverlayItem overlayitem = new OverlayItem(point, "Hello",
 				"I'm in Athens, Greece!");
@@ -204,9 +220,14 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 		mapOverlays.add(itemizedOverlay2);
 
 		MapController mapController = mapView.getController();
-		if(latitude==0.0 && longitude==0.0){
-		mapController.animateTo(point2);
-		}
+		if(latitude==0.0 && longitude==0.0 && ch==0){
+			mapController.animateTo(point2);
+			}
+			else{
+				if(pointme==null)
+					Log.d("gówno", Integer.toString(20));
+				mapController.animateTo(pointme);	
+			}
 		mapController.setZoom(15);
         mapView.setStreetView(!value1);
         mapView.setSatellite(value1);
@@ -217,6 +238,27 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	    Intent intent = new Intent(this, OknoMenuGlowne.class);
 	    startActivity(intent);
 	}
+	 public boolean onKeyDown(int keyCode, KeyEvent event) {
+	      Log.d(null,"In on Key Down");
+	      if (keyCode == KeyEvent.KEYCODE_BACK) {
+	    	  Log.d(null,"tuttttttttttttttttt");
+	    	  AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	      	builder
+	      	.setTitle("Chcesz wyjœæ z aplikacji")
+	      	.setMessage("Na pewno?")
+	      	.setIcon(android.R.drawable.ic_dialog_alert)
+	      	.setPositiveButton("Tak", new DialogInterface.OnClickListener() {
+	      		@SuppressLint("NewApi")
+				public void onClick(DialogInterface dialog, int which) {			      	
+	      	    	//Yes button clicked, do something
+	      	    	finishAffinity();
+	      	    }
+	      	})
+	      	.setNegativeButton("Nie", null)						//Do nothing on no
+	      	.show();
+	      }
+	      return super.onKeyDown(keyCode, event);
+	  }
 	
 /*	public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
 		selection.setText(items1[position]);

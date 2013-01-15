@@ -23,7 +23,8 @@ public class OknoUstawienia extends Activity {
 	}
 	public void zmiana(View view){
 		Intent intent = new Intent(this, OknoZmianaHasla.class);
-	    startActivity(intent);
+		startActivity(intent);
+
 	}
 	public void zmianaemail(View view){
 		Intent intent = new Intent(this, OknoZmianaEmail.class);
