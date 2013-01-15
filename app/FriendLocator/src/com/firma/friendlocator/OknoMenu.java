@@ -40,7 +40,7 @@ public class OknoMenu extends MapActivity {
 	public LocationManager locmgr = null;
 	public TextView mytext;
 	
-	Boolean value1=true;
+	Boolean value1=false;
 	GeoPoint pointme;
 	
 	protected boolean isRouteDisplayed() {
@@ -85,7 +85,7 @@ public class OknoMenu extends MapActivity {
     @Override
     public void onResume() {
         super.onResume();
-        locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,10000.0f,onLocationChange);
+        locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,10000.0f,onLocationChange);
     }
 	CustomItemizedOverlay meold=null;
     public void update(){
@@ -94,17 +94,16 @@ public class OknoMenu extends MapActivity {
     	if(meold!=null){
     		mapOverlays.remove(meold);
     	}
-    	Drawable drawable = this.getResources().getDrawable(R.drawable.google);
-    	CustomItemizedOverlay me = new CustomItemizedOverlay(
-				drawable, this);
+    	Drawable drawable = this.getResources().getDrawable(R.drawable.map_point);
+    	CustomItemizedOverlay me = new CustomItemizedOverlay(drawable, this);
     	GeoPoint pointme = new GeoPoint((int) (latitude*1e6), (int) (longitude*1e6));
-		OverlayItem mee = new OverlayItem(pointme, "Me",
-				"I'm hear");
+		OverlayItem mee = new OverlayItem(pointme, "Me", "I'm here");
 		me.addOverlay(mee);
 		mapOverlays.add(me);
 		if(ch==0){
 			ch=1;
-		mapController.animateTo(pointme);
+			mapController.animateTo(pointme);
+			mapController.setZoom(18);
 		}
 		meold=me;
     	
@@ -118,7 +117,7 @@ public class OknoMenu extends MapActivity {
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 		setContentView(R.layout.activity_okno_menu);
-		
+	
 		mytext = (TextView) findViewById(R.id.mytext);
         
         //grab the location manager service
@@ -138,7 +137,7 @@ public class OknoMenu extends MapActivity {
 		mapView = (MapView) findViewById(R.id.map_view);
 		mapView.setBuiltInZoomControls(true);
 		
-		Drawable drawable = this.getResources().getDrawable(R.drawable.google);
+		Drawable drawable = this.getResources().getDrawable(R.drawable.google); /**/
 		List mapOverlays = mapView.getOverlays();
 		Log.d("ilosc znajomych", Integer.toString(friends.size()));
 		GeoPoint point10 = null;
@@ -183,7 +182,7 @@ public class OknoMenu extends MapActivity {
 		if(latitude==0.0 && longitude==0.0){
 		mapController.animateTo(point2);
 		}
-		mapController.setZoom(10);
+		mapController.setZoom(15);
         mapView.setStreetView(!value1);
         mapView.setSatellite(value1);
         mapView.invalidate();
