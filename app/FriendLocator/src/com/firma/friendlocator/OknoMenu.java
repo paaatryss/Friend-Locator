@@ -27,20 +27,89 @@ import com.google.android.maps.OverlayItem;
 public class OknoMenu extends MapActivity {
 	public static MapView mapView;
 	public static int i=1;
+	public static int ch=0;
 
 	private static final int latitudeE6 = 37985339;
 	private static final int longitudeE6 = 23716735;
 	double lat=0;
 	double lon=0;
 	
-	double latitude;
-	double longitude;
+	double latitude,latitudeold;
+	double longitude,longitudeold;
 	
 	public LocationManager locmgr = null;
 	public TextView mytext;
 	
 	Boolean value1=true;
+	GeoPoint pointme;
+	
+	protected boolean isRouteDisplayed() {
+		return false;
+	}
+	
+	//Start a location listener
+    LocationListener onLocationChange=new LocationListener() {
+        public void onLocationChanged(Location loc) {
+            //sets and displays the lat/long when a location is provided
+            String latlong = "Moja Lokacja: " + loc.getLatitude() + ", " + loc.getLongitude();   
+            mytext.setText(latlong);
+            latitudeold=latitude;
+            longitudeold=longitude;
+            latitude = loc.getLatitude();
+            longitude = loc.getLongitude();
+            update();
+        }
+         
+        public void onProviderDisabled(String provider) {
+        // required for interface, not used
+        }
+         
+        public void onProviderEnabled(String provider) {
+        // required for interface, not used
+        }
+         
+        public void onStatusChanged(String provider, int status,
+        Bundle extras) {
+        // required for interface, not used
+        }
+    };
 
+    //pauses listener while app is inactive
+    @Override
+    public void onPause() {
+        super.onPause();
+        locmgr.removeUpdates(onLocationChange);
+    }
+    
+    //reactivates listener when app is resumed
+    @Override
+    public void onResume() {
+        super.onResume();
+        locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,10000.0f,onLocationChange);
+    }
+	CustomItemizedOverlay meold=null;
+    public void update(){
+    	MapController mapController = mapView.getController();
+    	List mapOverlays = mapView.getOverlays();
+    	if(meold!=null){
+    		mapOverlays.remove(meold);
+    	}
+    	Drawable drawable = this.getResources().getDrawable(R.drawable.google);
+    	CustomItemizedOverlay me = new CustomItemizedOverlay(
+				drawable, this);
+    	GeoPoint pointme = new GeoPoint((int) (latitude*1e6), (int) (longitude*1e6));
+		OverlayItem mee = new OverlayItem(pointme, "Me",
+				"I'm hear");
+		me.addOverlay(mee);
+		mapOverlays.add(me);
+		if(ch==0){
+			ch=1;
+		mapController.animateTo(pointme);
+		}
+		meold=me;
+    	
+    }
+    
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -95,7 +164,7 @@ public class OknoMenu extends MapActivity {
 				drawable, this);
 		CustomItemizedOverlay itemizedOverlay2 = new CustomItemizedOverlay(
 				drawable, this);
-
+		Log.d("moja lokalizacja", Double.toString(longitude));
 		GeoPoint point = new GeoPoint(latitudeE6, longitudeE6);
 		GeoPoint point2 = new GeoPoint(40453046, -3688445);
 
@@ -111,59 +180,17 @@ public class OknoMenu extends MapActivity {
 		mapOverlays.add(itemizedOverlay2);
 
 		MapController mapController = mapView.getController();
-
+		if(latitude==0.0 && longitude==0.0){
 		mapController.animateTo(point2);
-		mapController.setZoom(20);
-		//mapView.setSatellite(true);
+		}
+		mapController.setZoom(10);
         mapView.setStreetView(!value1);
         mapView.setSatellite(value1);
         mapView.invalidate();
 	}
-
-	protected boolean isRouteDisplayed() {
-		return false;
-	}
+	
 	public void menu(View view) {
 	    Intent intent = new Intent(this, OknoMenuGlowne.class);
 	    startActivity(intent);
 	}
-	
-	//Start a location listener
-    LocationListener onLocationChange=new LocationListener() {
-        public void onLocationChanged(Location loc) {
-            //sets and displays the lat/long when a location is provided
-            String latlong = "Moja Lokacja: " + loc.getLatitude() + ", " + loc.getLongitude();   
-            mytext.setText(latlong);
-            
-            latitude = loc.getLatitude();
-            longitude = loc.getLongitude();
-        }
-         
-        public void onProviderDisabled(String provider) {
-        // required for interface, not used
-        }
-         
-        public void onProviderEnabled(String provider) {
-        // required for interface, not used
-        }
-         
-        public void onStatusChanged(String provider, int status,
-        Bundle extras) {
-        // required for interface, not used
-        }
-    };
-
-    //pauses listener while app is inactive
-    @Override
-    public void onPause() {
-        super.onPause();
-        locmgr.removeUpdates(onLocationChange);
-    }
-    
-    //reactivates listener when app is resumed
-    @Override
-    public void onResume() {
-        super.onResume();
-        locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,10000.0f,onLocationChange);
-    }
 }

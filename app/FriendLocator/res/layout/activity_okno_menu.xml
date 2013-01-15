@@ -15,7 +15,7 @@
      android:layout_alignParentLeft="true"
      android:layout_alignParentRight="true"
      android:layout_below="@+id/button_menu"
-     android:apiKey="0WyShXr4D8NFF1G9uSBC8uzui5Rzpk44fS0ayLg"
+     android:apiKey="0tyavlpZIin99sFFSxQsLD_PfBQ_inoVTtHh8Pw"
      android:clickable="true"
      android:enabled="true" />
 
