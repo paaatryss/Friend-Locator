@@ -69,7 +69,6 @@ public class OknoLogowania extends Activity {
     			 showToast("Dane Zapisane");
              }
     		Intent intent = new Intent(this, OknoMenu.class);
-    		tmp.intent=intent;
     	    startActivity(intent);
     	}
 	}
