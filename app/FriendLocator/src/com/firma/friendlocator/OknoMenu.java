@@ -56,6 +56,13 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	static double latitude,latitudeold;
 	static double longitude,longitudeold;
 	
+    static public Context re=null;
+    static Drawable drawablere=null;
+    static Drawable drawablerem=null;
+    static CustomItemizedOverlay itemizedOverlayre=null;
+	
+	static ServerConnector test = new ServerConnector(OknoLogowania.getToken());
+	
 	public LocationManager locmgr = null;
 	//public TextView mytext;
 	
@@ -71,11 +78,13 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
         public void onLocationChanged(Location loc) {
             //sets and displays the lat/long when a location is provided
             String latlong = "Moja Lokacja: " + loc.getLatitude() + ", " + loc.getLongitude();   
-            //mytext.setText(latlong);
             latitudeold=latitude;
             longitudeold=longitude;
             latitude = loc.getLatitude();
             longitude = loc.getLongitude();
+            Log.d("onLocationChanged", "przed upd na serv, token:"+OknoLogowania.getToken());
+            Log.d("onLocationChanged", Integer.toString(test.SendMyLocation((int) (latitude*1e6), (int) (longitude*1e6))) );
+            
             update();
         }
          
@@ -104,8 +113,8 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     @Override
     public void onResume() {
         super.onResume();
-        //locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,10000.0f,onLocationChange);
-        locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,10000.0f,onLocationChange);
+        //locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,1000.0f,onLocationChange);
+        locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,1000.0f,onLocationChange);
     }
     static CustomItemizedOverlay itemizedOverlayrem=null;
     static CustomItemizedOverlay meold=null;
@@ -131,6 +140,8 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 		meold=me;
 		mapView.invalidate();	
     }
+    
+    
     public static void change(){
     	
     		
@@ -138,10 +149,8 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
         mapView.setSatellite(value1);
         mapView.invalidate();
     }
-    static public Context re=null;
-    static Drawable drawablere=null;
-    static Drawable drawablerem=null;
-    static CustomItemizedOverlay itemizedOverlayre=null;
+    
+    
     public static void draw(){
     	while(re==null){
     		
@@ -150,7 +159,6 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
         drawablerem = re.getResources().getDrawable(R.drawable.map_point);
     	itemizedOverlayre = new CustomItemizedOverlay(drawablere, re);
     	itemizedOverlayrem = new CustomItemizedOverlay(drawablerem, re);
-		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
 		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		List mapOverlays = mapView.getOverlays();

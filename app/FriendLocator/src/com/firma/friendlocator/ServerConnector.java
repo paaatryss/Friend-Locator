@@ -72,4 +72,47 @@ public class ServerConnector {
 			    		    return new ArrayList<Friend>();
 			    }
 	}
+	public int SendMyLocation(int lat, int lng){
+		 StringBuilder builder = new StringBuilder();
+		    HttpClient client = new DefaultHttpClient();
+		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=sendmylocation&token=" + this.token + "&lat=" + lat + "&lng=" + lng);
+		    Log.d("SendMyLocation", "1");
+		    try {
+			      HttpResponse response = client.execute(httpGet);
+			      StatusLine statusLine = response.getStatusLine();
+			      int statusCode = statusLine.getStatusCode();
+			      Log.d("SendMyLocation", "2");
+    		      if (statusCode == 200) {
+    		        HttpEntity entity = response.getEntity();
+    		        InputStream content = entity.getContent();
+    		        BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+    		        String line;
+    		        while ((line = reader.readLine()) != null) {
+    		          builder.append(line + "\n");
+    		        }
+    		      } else {
+    		        	return 1;
+    		      }
+    		     Log.d("SendMyLocation", "3");
+			    } catch (ClientProtocolException e) {
+			      e.printStackTrace();
+			    } catch (IOException e) {
+			      e.printStackTrace();
+			    }
+			    try{
+			    	Log.d("SendMyLocation:", "1");
+			    	JSONObject jObject = new JSONObject(builder.toString());
+			    	Log.d("SendMyLocation:", "3");
+			    	int error = jObject.optInt("error");
+			    	Log.d("SendMyLocation:", "error: " + error);
+			    	if(error != 1)
+			    	{
+			    		return 0;
+			    	}
+			    	Log.d("SendMyLocation:", "6");
+			    }catch(JSONException e){
+			    		return 1;
+			    }
+		return 1;
+		}
 }
