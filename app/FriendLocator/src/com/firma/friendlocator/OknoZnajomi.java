@@ -35,7 +35,8 @@ public class OknoZnajomi extends Activity{
 	ArrayList<Friend> friends = new ArrayList<Friend>();
 	
 	protected void onCreate(Bundle savedInstanceState) {		
-		ServerConnector test = new ServerConnector("c576526171df6f92db16fc1c2cbf1dc0");
+		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
+		Log.d("OknoZnajomi", "token pobrany " + OknoLogowania.getToken());
 		friends = test.GetFriends();
 		Log.d("ilosc frendow", Integer.toString(friends.size()));
 		for(int i=0; i<friends.size(); i++)

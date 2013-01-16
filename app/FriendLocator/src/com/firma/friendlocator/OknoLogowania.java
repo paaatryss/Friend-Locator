@@ -1,8 +1,6 @@
 package com.firma.friendlocator;
 
-
 import com.firma.friendlocator.R;
-
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.app.Activity;
@@ -13,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,9 +20,12 @@ public class OknoLogowania extends Activity {
 	public CheckBox zapiszDane;
 	private static final String PREFERENCES_LOGIN = "login";
     private static final String PREFERENCES_PASSWORD = "haslo";
+    public static final String PREFERENCES_TOKEN = "token";
     private SharedPreferences preferences;
+    private static SharedPreferences token_pref;
     public EditText loginField;
     public EditText passwordField;
+    static String check;
     
 	
 	@Override
@@ -40,12 +40,12 @@ public class OknoLogowania extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 				setContentView(R.layout.activity_okno_logowania);
 		preferences = getSharedPreferences(PREFERENCES_LOGIN, Activity.MODE_PRIVATE);
+		token_pref = getSharedPreferences(PREFERENCES_TOKEN, Activity.MODE_PRIVATE);
 		restoreData();
 		
 	}
 	
 	public void zaloguj(View view) {
-		String check;
 		EditText loginField = (EditText) findViewById(R.id.text_login);  
     	String login = loginField.getText().toString(); 
     	final EditText passwordField = (EditText) findViewById(R.id.text_haslo);  
@@ -64,12 +64,16 @@ public class OknoLogowania extends Activity {
     	}
     	else{
     		zapiszDane = (CheckBox) findViewById(R.id.checkBox_zapamietajDane);
-    		 if (zapiszDane.isChecked()) {
-    			 saveData();
-    			 showToast("Dane Zapisane");
-             }
+    		if (zapiszDane.isChecked()) {
+    			saveData();
+    			
+    			showToast("Dane Zapisane");
+            }
+    		Log.d("OknoMenu", "Blad zapisania tokena");
+    		saveToken(check);
+    		Log.d("OknoMenu", "Token zapisany");
     		Intent intent = new Intent(this, OknoMenu.class);
-    	    startActivity(intent);
+    		startActivity(intent);
     	}
 	}
     private void showToast(String msg) {
@@ -104,5 +108,15 @@ public class OknoLogowania extends Activity {
 	    passwordField = (EditText) findViewById(R.id.text_haslo);
 	    loginField.setText(loginFromPreferences);
 	    passwordField.setText(passwordFromPreferences);
+	}
+	
+	public static void saveToken(String token) {;
+		SharedPreferences.Editor tokenPrefEditor = token_pref.edit();
+		tokenPrefEditor.putString(PREFERENCES_TOKEN, token);
+		tokenPrefEditor.commit();
+	}
+
+	public static String getToken() {
+		return check;
 	}
 }

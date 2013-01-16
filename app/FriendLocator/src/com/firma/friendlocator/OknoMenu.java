@@ -104,6 +104,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     @Override
     public void onResume() {
         super.onResume();
+        locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,10000.0f,onLocationChange);
         locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,10000.0f,onLocationChange);
     }
     static CustomItemizedOverlay meold=null;
@@ -137,7 +138,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     }
     
     public void draw(){
-		ServerConnector test = new ServerConnector("c576526171df6f92db16fc1c2cbf1dc0");
+		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
 		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		
@@ -187,7 +188,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
   
         //mytext.setText("Oczekiwanie na lokalizacje");
         
-		ServerConnector test = new ServerConnector("c576526171df6f92db16fc1c2cbf1dc0");
+		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
 		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		

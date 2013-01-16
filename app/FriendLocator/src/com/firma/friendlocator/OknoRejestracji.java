@@ -48,6 +48,7 @@ public class OknoRejestracji extends Activity {
         		Toast.makeText(context, "b³¹s po³¹czenia!", Toast.LENGTH_LONG).show();
         	}
         	else{
+        		OknoLogowania.saveToken(checka);
         		Intent intent = new Intent(this, OknoMenu.class);
         	    startActivity(intent);
         	}
