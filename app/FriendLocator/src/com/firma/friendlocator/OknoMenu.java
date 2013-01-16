@@ -13,6 +13,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -45,6 +46,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	public static MapView mapView;
 	public static int i=1;
 	public static int ch=0;
+	public static int u=0;
 
 	private static final int latitudeE6 = 37985339;
 	private static final int longitudeE6 = 23716735;
@@ -133,6 +135,31 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
         mapView.setSatellite(value1);
         mapView.invalidate();
     }
+    
+    public void draw(){
+		ServerConnector test = new ServerConnector("c576526171df6f92db16fc1c2cbf1dc0");
+		friends = new ArrayList<Friend>();
+		friends = test.GetFriends();
+		
+		Drawable drawable = this.getResources().getDrawable(R.drawable.google); /**/
+		List mapOverlays = mapView.getOverlays();
+		Log.d("ilosc znajomych update!!!!!!!!!!!!!!", Integer.toString(friends.size()));
+		for(int i=0; i<friends.size(); i++)
+		{
+			Friend fr = friends.get(i);
+			Log.d("latiutude", Integer.toString(fr.getLatitude()));
+			/*items1[i] = (fr.getName() + ", " + fr.getLogin());*/
+			CustomItemizedOverlay itemizedOverlay = new CustomItemizedOverlay(
+					drawable, this);
+			GeoPoint point = new GeoPoint(fr.getLatitude(), fr.getLongitude());
+			OverlayItem overlayitem = new OverlayItem(point, fr.getName(),
+					fr.getLogin());
+			itemizedOverlay.addOverlay(overlayitem);
+			mapOverlays.add(itemizedOverlay);
+			MapController mapController = mapView.getController();
+		}
+    }
+    public Handler handler=new Handler();
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -251,6 +278,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	      		@SuppressLint("NewApi")
 				public void onClick(DialogInterface dialog, int which) {			      	
 	      	    	//Yes button clicked, do something
+	      			dataupdate.updateTimer.cancel();
 	      	    	finishAffinity();
 	      	    }
 	      	})
