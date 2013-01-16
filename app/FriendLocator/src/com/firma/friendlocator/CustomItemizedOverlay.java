@@ -28,6 +28,10 @@ public class CustomItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 	protected OverlayItem createItem(int i) {
 		return mapOverlays.get(i);
 	}
+	
+	public void remove(){
+		mapOverlays.clear();
+	}
 
 	@Override
 	public int size() {
