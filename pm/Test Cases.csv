@@ -1,942 +1,942 @@
-Test case nr;STORY 1;;
-1;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;;;
-2;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Wpisuje login:testlogin i haslo:testhaslo klikam zaloguj (taki uzytkownik istnieje);Pojawia siê ekran g³ówny
-;;;
-3;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Wpisuje login:user@hotmail.com i has³o:abrakadabra;Pojawia siê okno informuj¹ce podaniu b³ednego loginu lub has³a
-;;;
-4;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Wpisuje login i haslo nie istniejacego uzytkownika;Pojawia siê okno informuj¹ce podaniu b³ednego loginu lub has³a
-;;;
-5;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Bez wpisania loginu i has³a klikam przycisk zaloguj;Pojawia siê okno informuj¹ce podaniu b³ednego loginu lub has³a
-;STORY 2;;
-;;;
-6;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja
-;3;wpisuje login:user email:user@gmail.com has³o:user i klikam przycisk zarejestruj siê;pojawia siê ekran g³ówny
-;;;
-7;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja
-;3;wpisuje login:user email:user has³o:user22 i klikam przycisk zarejestruj siê;pojawia siê okno informuj¹ce o b³ednym emailu b¹dŸ haœle
-;;;
-8;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja
-;3;wpisuje login:user email:user@gmail.com has³o:user i klikam przycisk zarejestruj siê;pojawia siê okno  informuj¹ce o b³êdnym emailu b¹dŸ haœle
-;;;
-9;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja
-;3;wpisuje login:user email:user@gmail.com has³o:user33 i klikam przycisk zarejestruj siê;pojawia siê okno  informuj¹ce ¿e podany login jest juz zajêty
-;STORY 3;;
-10;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Wpisuje poprawny login i haslo, zaznaczam zapamietaj login i haslo i klikam zaloguj;Pojawia sie ekran glowny
-;3;Zamykam aplikacje;Widze appdrawer
-;4;Wlaczam aplikacje ponownie;Pojawia sie ekran glowny
-;;;
-11;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;2;Wpisuje niepoprawny login i haslo, zaznaczam zapamietaj login i haslo, i klikam zaloguj;pojawia sie informacja o zlym loginie lub hasle
-;;;
-12;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;Ukazuje siê erkan logowania
-;1;Zostawiam puste pole loginu i hasla, zaznaczam zapamietaj login i haslo, i klikam zaloguj;pojawia sie informacja o zlym loginie lub hasle
-;STORY 4;;
-;;;
-13;STEPID;ACTION;EXPRECTED RESULT
-;1;w³czam aplikacje;pojawia siê  ekran logowania
-;2;Wpisuje poprawny login i haslo, klikam zaloguj;Pojawia sie ekran glowny
-;;;
-14;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;Wpisuje w polu login has³o a w polu ha³o login, i klikam zaloguj;pojawia sie dialbox o zlym loginie lub hasle
-;;;
-15;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;Zostawiam puste pole loginu i hasla, i klikam zaloguj;pojawia sie informacja o zlym loginie lub hasle
-;;;
-16;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;Wpisuje login i zostawiam pole has³o puste;pojawia siê dialogbox  z Ÿle podanym has³em lub mailem
-;;;
-17;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;Wpisuje login i zostawiam pole has³o puste;pojawia siê dialogbox  z Ÿle podanym has³em lub mailem
-;;;
-18;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o i klikam zarejestruj siê;pojawia siê okno rejestracji
-;3;w telefonie klikam przycisk back;pojawia siê okno logowania z pustymi polami login i has³o
-;STORY 5;;
-;;;
-19;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a
-;3;wpisuje poprawny login i klikam wyœlij;pojawia siê dialogbox  z potwierdzeniem wys³ania nowego has³a
-;4;klikam ok;pojawia siê okno logowania
-;;;
-20;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a
-;3;wpisuje nie poprawny login i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em
-21;;;
-;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a
-;3;zostawiam pole login puste i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em
-;;;
-22;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a
-;3;wpisuje w oknie login adres mailowy i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em
-;;;
-23;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a
-;3;nie wpisuje ¿adnych danych i klikam przycisk wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em
-;4;w telefonie klikam przycisk back;pojawa siê ekran logowania
-;STORY 6;;
-;;;
-24;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a
-;5;wpisuje poprawne stare has³o oraz nowe has³o:abbbba i klikam wyœlij;pojawia sie dialogbox potwierdzaj¹cy zmiane has³a
-;6;klikam ok;pojawia sie menu g³ówne
-;;;
-25;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a
-;5;wpisuje poprawne stare has³o oraz nowe has³o:andrzejek@op.pl i klikam wyœlij;pojawia sie dialogbox z informacja o Ÿle podanym haœle
-;;;
-26;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ
-;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a
-;6;wpisuje poprawne takie samo nowe has³o i stare has³o i klikam wyœlij;pojawia sie dialogbox z informacja ¿e nowe has³o i stare s¹ identyczne
-;;;
-27;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ
-;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a
-;6;wpisuje nie poprawne stare has³o i nowe has³o i klkam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle
-;;;
-28;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ
-;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a
-;6;zostawiam puste pola nowe has³o i stare has³o i klikam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle
-;;;
-29;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ
-;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a
-;6;wpisuje poprawne stare has³o i zostawiam puste pole nowe has³o i klikam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle
-;;;
-30;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ
-;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a
-;6;zostawiam puste pole stare has³o i wpisuje nowe has³o i klikam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle
-;STORY 7;;
-;;;
-31;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania
-;;;
-32;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania z wype³nionymi polami login i has³o
-;5;klikam zaloguj;pojawia siê ekran g³ówny
-;;;
-33;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania z wype³nionymi polami login i has³o
-;5;klikam zaloguj;pojawia siê ekran g³ówny
-;;;
-34;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustwienia;pojawia sie ekran z ustawieniami
-;5;w telefonie klikam przycisk back;pojawia siê menu g³ówne
-;6;klikam na przycisk wloguj siê;pojawia sie ekran logowania z wype³nionymi polami login i has³o
-;7;klikam zaloguj;pojawia siê ekran g³ówny
-;STORY 8;;
-;;;
-35;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;;;
-36;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk powrót;pojawia siê ekran g³ówny
-;;;
-37;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;poruszam siê po mapie;zmiana po³o¿enia olaz skali mapy z ekranu g³ównego
-;4;klikam na przycisk menu;pojawia siê ekran g³ówny
-;STORY 9;;
-;;;
-38;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami
-;;;
-39;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami
-;5;w telefonie klikam przycisk back;pojawia siê menu g³ówne
-;;;
-40;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk powrót;pojawia siê ekran g³ówny
-;5;poruszam siê po mapie i klikam menu;pojawia siê menu g³ówne
-;6;klikam na przycisk ustawienia;pojawia siê ekran z ustawieniami
-;;;
-41;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk znajmoi;pojawia siê ekran ze znajomymi
-;5;w telefonie klikam na przycisk back;pojawia siê menu g³ówne
-;6;klikam na przycisk ustawienia;pojawia siê ekran z ustawieniami
-;STORY 10;;
-;;;
-42;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk znajomi;pojawia sie ekran ze znajomymi
-;;;
-43;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk znajomi;pojawia sie ekran ze znajomymi
-;4;w telefonie klikam przycisk back;pojawia sie menu g³ówne
-;;;
-44;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk powrót;pojawia siê ekran g³ówny
-;5;poruszam siê po mapie i klikam menu;pojawia siê menu g³ówne
-;6;klikam na przycisk znajomi;pojawia siê ekran ze znajomymi
-;;;
-45;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami
-;5;w telefonie klikam przycisk back;pojawia sie menu g³ówne
-;6;klikam na przycisk znajomi;pojawia siê ekran ze znajomymi
-;STORY 11;;
-;;;
-46;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami
-;;;
-47;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami
-;4;w telefonie klikam przycisk back;pojawia sie menu g³ówne
-;;;
-48;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk about;pojawia sie ekran z informacjami o aplikacji
-;5;w telefonie klikam przycisk back;pojawia sie menu g³ówne
-;6;klikam na przycisk zaproszenia;pojawia siê ekran z zaproszeniami
-;;;
-49;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami
-;5;w telefonie klikam przycisk back;pojawia sie menu g³ówne
-;6;klikam na przycisk zaproszenia;pojawia siê ekran z zaproszeniami
-;;;
-50;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk powrót;pojawia siê ekran g³ówny
-;5;poruszam siê po mapie i klikam menu;pojawia siê menu g³ówne
-;6;klikam na przycisk zaproszenia;pojawia siê ekran z zaproszeniami
-;STORY 12;;
-;;;
-51;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami
-;5;klikam na zaproszenie;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?"
-;6;klikam akceptuj;dodaje osobe do znajomych
-;;;
-52;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami
-;5;klikam na zaproszenia;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?"
-;6;klikam odzruæ;odzruca zaproszenie i usuwa je z listy
-;;;
-53;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami
-;5;klikam na zaproszenia;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?"
-;6;klikam póŸniej;wraca do ekranu zaproszeñ nic nie zmieniaj¹c
-;;;
-54;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk zaproszenia nie maj¹c ¿adnych zaproszeñ;pojawia sie ekran z informacj¹ brak zaproszeñ
-;;;
-55;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami
-;5;w telefonie klikam na przycisk back;pojawia siê menu g³ówne
-;6;klikam na zaproszenia;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?"
-;7;klikam odzruæ;odzruca zaproszenie i usuwa je z listy
-;;;
-56;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;klikam na przycisk menu;pojawia siê menu g³ówne
-;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami
-;5;w telefonie klikam na przycisk back;pojawia siê menu g³ówne
-;6;klikam na przycisk znajomi;pojawia sie ekran ze znajomymi
-;7;w telefonie klikam na przycisk back;pojawia siê menu g³ówne
-;8;klikam na zaproszenia;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?"
-;9;klikam odzruæ;odzruca zaproszenie i usuwa je z listy
-;Story 13;;
-;;;
-57;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne
-;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê
-;;;
-;;;
-58;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne
-;4;Klikam przycisk Ustawienia;Otwiera sie menu ustawieñ
-;5;Klikam przycisk wróæ;Pojawia siê menu g³ówne
-;6;Klikam przycisk WyjdŸ;Aplikacja zamyka siê
-;;;
-59;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne
-;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê
-;;;
-60;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne
-;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê
-;;;
-61;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne
-;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê
-;;;
-62;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne
-;4;Klikam przycisk znajomi;pojawia siê menu znajomych
-;5;Klikam przycisk Powrót;Wraca do menu g³ownego
-;6;Klikam przycisk WyjdŸ;Aplikacja zamyka siê
-;Story 14;;
-;;;
-63;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 1 od góry;Pokazujê mape z lokalizacja znajomego
-;;;
-64;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie PUSTA lista znajomych
-;;;
-65;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 2 od góry;Pokazujê mape z lokalizacja znajomego
-;;;
-66;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 3 od góry;Pokazujê mape z lokalizacja znajomego
-;;;
-67;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 1 od do³u listy;Pokazujê mape z lokalizacja znajomego
-;Story 15;;
-68;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 1 od góry;Pokazujê mape z lokalizacja znajomego
-;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje
-;;;
-69;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 5 od góry;Pojawia siê mapa z lokalizacj¹ znajomego
-;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje
-;;;
-70;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 2 od góry;Pokazujê mape z lokalizacja znajomego
-;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje
-;;;
-71;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 3 od góry;Pokazujê mape z lokalizacja znajomego
-;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje
-;;;
-72;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 1 od do³u listy;Pokazujê mape z lokalizacja znajomego
-;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje
-;Story 16;;
-73;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 1 od góry;Pokazujê mape z lokalizacja znajomego
-;;;
-74;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 2 od góry;Pokazujê mape z lokalizacja znajomego
-;;;
-75;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr2 od góry;Pokazujê mape z lokalizacja znajomego
-;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje
-;;;
-76;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 3 od góry;Dymek z informacj¹ – brak lokalizacji
-;;;
-77;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 4 od góry;Pokazujê mape z lokalizacja znajmegoo
-;Story 17;;
-78;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹
-;;;
-79;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Menu;Pojawia sie Menu
-;4;Klikam na przycisk Powrót;Pojawia siê Ekran g³ówny
-;5;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹
-;;;
-80;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi;Pojawia sie menu znajomych
-;4;Klikam na przycisk Powrót;Pojawia siê Ekran g³ówny
-;5;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹
-;;;
-81;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Menu;Pojawia sie Menu
-;4;Klikam na przycisk About;Pojawia siê okno z informacjami
-;5;Klikam na przycisk Powrót;Pojawia siê menu g³ówne
-;6;Klikam na przycisk Powrót;Pojawia sie ekran g³ówny
-;7;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹
-;;;
-82;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;pojawia siê menu g³ówne
-;4;Klikam na przycisk Pomoc;Pojawia siê okno z informacjami
-;5;Klikam na przycisk Powrót;Pojawia siê menu g³ówne
-;6;Klikam na przycisk Powrót;Pojawia sie ekran g³ówny
-;7;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹
-;Story 18;;
-83;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne
-;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email
-;7;Wpisuje „Ala ma kota” i klikam ok;Pojawia siê komunikat „Niepoprawny email”
-;;;
-84;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne
-;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email
-;7;Wpisuje „patryk@fuhrman.pl” i klikam ok;Pojawia siê komunikat „Zosta³ wys³any email.”
-;8;Klikam ok;Przenosi do ekranu g³ownego
-;;;
-85;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne
-;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email
-;7;"Wpisuje „sdlkj;afsl” i klikam ok";Pojawia siê komunikat „Niepoprawny email”
-;;;
-86;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne
-;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email
-;7;"Wpisuje „; DROP DATABASE users;” i klikam ok";Pojawia siê komunikat „Niepoprawny email”
-;;;
-87;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne
-;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email
-;7;Wpisuje „+48790545768” i klikam ok;Pojawia siê komunikat „Niepoprawny email”
-;Story 19;;
-88;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych
-;;;
-89;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Wróæ;Pojawia siê ekran g³ówny
-;5;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych
-;;;
-90;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk „Moja lokalizacja”;Mapa przenosi siê na moj¹ lokalizacjê
-;4;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych
-;;;
-;;;
-91;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;4;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;5;Klikam na przycisk Wróæ;Pojawia siê ekran g³ówny
-;6;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych
-;;;
-92;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;4;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;5;Klikam na przycisk „About”;Pojawiaj¹ siê informacje o programie
-;6;Klikam na przycisk Wróæ;Pojawia siê menu g³owne
-;5;Klikam na przycisk Wróæ;Pojawia siê ekran g³ówny
-;6;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych
-;Story 20;;
-;;;
-93;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;5;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami
-;6;Wybieram opcje 30sek i klikam ok;Pojawia siê menu ustawieñ
-;;;
-94;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;5;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami
-;6;Wybieram opcje 1min i klikam ok;Pojawia siê menu ustawieñ
-;;;
-95;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;5;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami
-;6;Wybieram opcje 3min i klikam ok;Pojawia siê menu ustawieñ
-;;;
-96;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;5;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami
-;6;Klikam ok;Pojawia siê menu ustawieñ
-;;;
-97;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Znajomi;Pojawia siê lista znajomych
-;5;Klikam na przycisk wróæ;Pojawia siê menu g³ówne
-;6;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;7;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami
-;8;Wybieram opcje 3min i klikam ok;Pojawia siê menu ustawieñ
-;Story 21;;
-;;;
-98;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk About;Pojawia siê informacja o programie
-;;;
-99;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ
-;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne
-;6;Klikam na przycisk About;Pojawia siê informacja o programie
-;;;
-100;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Znajomi;Pojawia siê lista znajomych
-;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne
-;6;Klikam na przycisk About;Pojawia siê informacja o programie
-;;;
-101;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Zaproszenia;Pojawia siê lista zaproszeñ
-;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne
-;6;Klikam na przycisk About;Pojawia siê informacja o programie
-;;;
-102;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;4;Klikam na przycisk Pomoc;Pojawia siê informacje o pomocy
-;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne
-;6;Klikam na przycisk About;Pojawia siê informacja o programie
-;;;
-103;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 2 od góry;Pokazujê mape z lokalizacja znajomego
-;;;
-;;;
-104;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr2 od góry;Pokazujê mape z lokalizacja znajomego
-;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje
-;;;
-105;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 3 od góry;Dymek z informacj¹ – brak lokalizacji
-;;;
-106;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych
-;4;Wybieram znajomego nr 4 od góry;Pokazujê mape z lokalizacja znajmegoo
-;STORY 22;;
-;;;
-107;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam na przycisk Menu;Otwiera siê Menu
-;2;Klikam na przycisk Znajomi;Otwiera siê lista znajomych
-;3;Klikam na 1 znajomego;Pokazuj¹ siê dane znajomego
-;4;Klikam przycisk Poka¿ na mapie;Pokazuje znajomego na mapie
-;;;
-108;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam na przycisk Menu;Otwiera siê Menu
-;2;Klikam na przycisk Znajomi;Otwiera siê lista znajomych
-;3;Klikam na 2 znajomego;Pokazuj¹ siê dane znajomego
-;4;Klikam przycisk Poka¿ na mapie;Pokazuje znajomego na mapie
-;STORY 23;;
-;;;
-109;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam przycisk Menu;W³¹cza siê Menu
-;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji
-;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym
-;4;Wype³niam pola Temat i Wiadomoœæ i klikam wyœlij;Ukazuje siê informacja o wys³aniu Wiadomoœci
-;;;
-110;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam przycisk Menu;W³¹cza siê Menu
-;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji
-;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym
-;4;Nie wype³niam pól i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól
-;;;
-111;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam przycisk Menu;W³¹cza siê Menu
-;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji
-;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym
-;4;Nie wype³niam pola Temat i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól
-;;;
-112;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam przycisk Menu;W³¹cza siê Menu
-;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji
-;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym
-;4;Nie wype³niam pola Wiadomoœæ i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól
-;;;
-113;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam przycisk Menu;W³¹cza siê Menu
-;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji
-;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym
-;4;Wype³niam pola samymi cyframi;Ukazuje siê informacja o B³êdnym wype³nieniu
-;STORY 24;;
-;;;
-114;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam Menu;Ukazuje siê Menu
-;2;Klikam na Znajomi;Pojawia siê lista znajomych
-;3;Wybieram znajomego numer 1;Pokazuj¹ siê dane o znajomym
-;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê
-;5;Wybieram telefon;Dzwoniê do znajomego numer 1
-;;;
-115;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam Menu;Ukazuje siê Menu
-;2;Klikam na Znajomi;Pojawia siê lista znajomych
-;3;Wybieram znajomego numer 2;Pokazuj¹ siê dane o znajomym
-;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê
-;5;Wybieram telefon;Dzwoniê do znajomego numer 2
-;;;
-116;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam Menu;Ukazuje siê Menu
-;2;Klikam na Znajomi;Pojawia siê lista znajomych
-;3;Wybieram znajomego numer 3;Pokazuj¹ siê dane o znajomym
-;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê
-;5;Wybieram telefon;Dzwoniê do znajomego numer 3
-;;;
-117;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam Menu;Ukazuje siê Menu
-;2;Klikam na Znajomi;Pojawia siê lista znajomych
-;3;Wybieram znajomego numer 4;Pokazuj¹ siê dane o znajomym
-;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê
-;5;Wybieram telefon;Dzwoniê do znajomego numer 4
-;;;
-118;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam Menu;Ukazuje siê Menu
-;2;Klikam na Znajomi;Pojawia siê lista znajomych
-;3;Wybieram znajomego numer 5;Pokazuj¹ siê dane o znajomym
-;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê
-;5;Wybieram telefon;Dzwoniê do znajomego numer 5
-;STORY 25;;
-;;;
-119;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na mapie gest rozsze¿enia dwoma palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;;;
-120;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na menu gest rozsze¿ania;Wygl¹d interfejsu nie ulega zmianie
-;;;
-121;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na mapie gest rozsze¿enia trzema palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;;;
-122;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na mapie gest rozsze¿enia czterema palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;;;
-123;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na mapie gest rozsze¿enia piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;STORY 26;;
-;;;
-124;STEPID;ACTION;EXPRECTED RESULT
-;1;Dotykam jednym palcem na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku
-;;;
-;STEPID;ACTION;EXPRECTED RESULT
-125;1;Dotykam dwoma palcami na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku
-;;;
-126;STEPID;ACTION;EXPRECTED RESULT
-;1;Dotykam trzema palcami na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku
-;;;
-127;STEPID;ACTION;EXPRECTED RESULT
-;1;Dotykam czterema palcami na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku
-;;;
-128;STEPID;ACTION;EXPRECTED RESULT
-;1;Dotykam piêcioma palcami na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku
-;STORY 27;;
-;;;
-129;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków
-;2;Wybieram widok Satelitarny;Mapa zmienia wygl¹d na satelitarny
-;3;Wy³¹czam program;Program siê zamyka
-;4;W³¹czam program od nowa;Program uruchamia sie
-;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem satelitarnym
-;;;
-130;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków
-;2;Wybieram widok Ruchu;Mapa zmienia wygl¹d na widok ruchu
-;3;Wy³¹czam program;Program siê zamyka
-;4;W³¹czam program od nowa;Program uruchamia sie
-;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem ruchu
-;;;
-131;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków
-;2;Wybieram widok Terenu;Mapa zmienia wygl¹d na widok terenu
-;3;Wy³¹czam program;Program siê zamyka
-;4;W³¹czam program od nowa;Program uruchamia sie
-;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem terenu
-;;;
-132;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków
-;2;Wybieram widok Linii komunikacyjnych;Mapa zmienia wygl¹d na widok linii komunikacyjnych
-;3;Wy³¹czam program;Program siê zamyka
-;4;W³¹czam program od nowa;Program uruchamia sie
-;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem linii komunikacyjnych
-;;;
-133;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków
-;2;Wybieram widok Wikipedii;Mapa zmienia wygl¹d na widok wikipedii
-;3;Wy³¹czam program;Program siê zamyka
-;4;W³¹czam program od nowa;Program uruchamia sie
-;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem wikipedii
-;STORY 28;;
-;;;
-134;STEPID;ACTION;EXPRECTED RESULT
-;1;Wchodzê do menu;Ukazuje siê menu
-;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy
-;3;"Wybieram opcjê ""Jak dodaæ znajomego?""";Ukazuje siê tekst pomocy na temat dodawania znajomego
-;;;
-135;STEPID;ACTION;EXPRECTED RESULT
-;1;Wchodzê do menu;Ukazuje siê menu
-;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy
-;3;"Wybieram opcjê ""Jak siê wylogowaæ?""";Ukazuje siê tekst pomocy na temat wylogowywania
-;;;
-136;STEPID;ACTION;EXPRECTED RESULT
-;1;Wchodzê do menu;Ukazuje siê menu
-;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy
-;3;"Wybieram opcjê ""Jak wyjœæ z programu?""";Ukazuje siê tekst pomocy na temat wy³¹czania programu
-;;;
-137;STEPID;ACTION;EXPRECTED RESULT
-;1;Wchodzê do menu;Ukazuje siê menu
-;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy
-;3;"Wybieram opcjê ""Jak zmieniæ has³o?""";Ukazuje siê tekst pomocy na temat zmiany has³a
-;;;
-138;STEPID;ACTION;EXPRECTED RESULT
-;1;Wchodzê do menu;Ukazuje siê menu
-;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy
-;3;"Wybieram opcjê ""Jak usun¹æ znajomego?""";Ukazuje siê tekst pomocy na temat usuwania znajomego
-;STORY 29;;
-;;;
-139;STEPID;ACTION;EXPRECTED RESULT
-;1;Klikam na wskazówkê kompasu znajduj¹c¹ siê na mapie;Mapa wraca do domyœlnego po³o¿enia z pó³noc¹ na górze
-;;;
-140;STEPID;ACTION;EXPRECTED RESULT
-;1;Dotykam ekran dwoma palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców
-;;;
-141;STEPID;ACTION;EXPRECTED RESULT
-;1;Dotykam ekran piêcioma palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców
-;;;
-142;STEPID;ACTION;EXPRECTED RESULT
-;1;Dotykam ekran trzema palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców
-;;;
-143;STEPID;ACTION;EXPRECTED RESULT
-;1;Dotykam ekran czterema palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców
-;STORY 30;;
-;;;
-144;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na mapie gest szczypania dwoma palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;;;
-145;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na menu gest szczypania;Wygl¹d interfejsu nie ulega zmianie
-;;;
-146;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na mapie gest szczypania trzema palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;;;
-147;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na mapie gest szczypania czterema palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;;;
-148;STEPID;ACTION;EXPRECTED RESULT
-;1;Wykonujê na mapie gest szczypania piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;;;
-149;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;4;Klikam na przycisk Menu;Pojawia siê menu g³owne
-;5;Klikam na przycisk „About”;Pojawiaj¹ siê informacje o programie
-;6;Klikam na przycisk Wróæ;Pojawia siê menu g³owne
-;5;Klikam na przycisk Wróæ;Pojawia siê ekran g³ówny
-;7;Wykonujê na mapie gest szczypania piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta)
-;;;
-150;STEPID;ACTION;EXPRECTED RESULT
-;1;W³¹czam aplikacje;pojawia sê ekran logowania
-;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny
-;3;poruszam siê po mapie;zmiana po³o¿enia olaz skali mapy z ekranu g³ównego
-;4;klikam na przycisk menu;pojawia siê ekran g³ówny
-;5;Wykonujê na mapie gest szczypania piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta)
+Test case nr;STORY 1;;;
+1;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;;;;
+2;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Wpisuje login:testlogin i haslo:testhaslo klikam zaloguj (taki uzytkownik istnieje);Pojawia siê ekran g³ówny;
+;;;;
+3;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Wpisuje login:user@hotmail.com i has³o:abrakadabra;Pojawia siê okno informuj¹ce podaniu b³ednego loginu lub has³a;
+;;;;
+4;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Wpisuje login i haslo nie istniejacego uzytkownika;Pojawia siê okno informuj¹ce podaniu b³ednego loginu lub has³a;
+;;;;
+5;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Bez wpisania loginu i has³a klikam przycisk zaloguj;Pojawia siê okno informuj¹ce podaniu b³ednego loginu lub has³a;
+;STORY 2;;;
+;;;;
+6;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja;
+;3;wpisuje login:user email:user@gmail.com has³o:user i klikam przycisk zarejestruj siê;pojawia siê ekran g³ówny;
+;;;;
+7;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja;
+;3;wpisuje login:user email:user has³o:user22 i klikam przycisk zarejestruj siê;pojawia siê okno informuj¹ce o b³ednym emailu b¹dŸ haœle;
+;;;;
+8;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja;
+;3;wpisuje login:user email:user@gmail.com has³o:user i klikam przycisk zarejestruj siê;pojawia siê okno  informuj¹ce o b³êdnym emailu b¹dŸ haœle;
+;;;;
+9;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja;
+;3;wpisuje login:user email:user@gmail.com has³o:user33 i klikam przycisk zarejestruj siê;pojawia siê okno  informuj¹ce ¿e podany login jest juz zajêty;
+;STORY 3;;;
+10;STEPID;ACTION;EXPRECTED RESULT;fail
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Wpisuje poprawny login i haslo, zaznaczam zapamietaj login i haslo i klikam zaloguj;Pojawia sie ekran glowny;
+;3;Zamykam aplikacje;Widze appdrawer;
+;4;Wlaczam aplikacje ponownie;Pojawia sie ekran glowny;
+;;;;
+11;STEPID;ACTION;EXPRECTED RESULT;fail
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;2;Wpisuje niepoprawny login i haslo, zaznaczam zapamietaj login i haslo, i klikam zaloguj;pojawia sie informacja o zlym loginie lub hasle;
+;;;;
+12;STEPID;ACTION;EXPRECTED RESULT;fail
+;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
+;1;Zostawiam puste pole loginu i hasla, zaznaczam zapamietaj login i haslo, i klikam zaloguj;pojawia sie informacja o zlym loginie lub hasle;
+;STORY 4;;;
+;;;;
+13;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;w³czam aplikacje;pojawia siê  ekran logowania;
+;2;Wpisuje poprawny login i haslo, klikam zaloguj;Pojawia sie ekran glowny;
+;;;;
+14;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;Wpisuje w polu login has³o a w polu ha³o login, i klikam zaloguj;pojawia sie dialbox o zlym loginie lub hasle;
+;;;;
+15;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;Zostawiam puste pole loginu i hasla, i klikam zaloguj;pojawia sie informacja o zlym loginie lub hasle;
+;;;;
+16;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;Wpisuje login i zostawiam pole has³o puste;pojawia siê dialogbox  z Ÿle podanym has³em lub mailem;
+;;;;
+17;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;Wpisuje login i zostawiam pole has³o puste;pojawia siê dialogbox  z Ÿle podanym has³em lub mailem;
+;;;;
+18;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o i klikam zarejestruj siê;pojawia siê okno rejestracji;
+;3;w telefonie klikam przycisk back;pojawia siê okno logowania z pustymi polami login i has³o;
+;STORY 5;;;
+;;;;
+19;STEPID;ACTION;EXPRECTED RESULT;fail
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
+;3;wpisuje poprawny login i klikam wyœlij;pojawia siê dialogbox  z potwierdzeniem wys³ania nowego has³a;
+;4;klikam ok;pojawia siê okno logowania;
+;;;;
+20;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;fail
+;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
+;3;wpisuje nie poprawny login i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em;
+21;;;;
+;STEPID;ACTION;EXPRECTED RESULT;fail
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
+;3;zostawiam pole login puste i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em;
+;;;;
+22;STEPID;ACTION;EXPRECTED RESULT;fail
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
+;3;wpisuje w oknie login adres mailowy i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em;
+;;;;
+23;STEPID;ACTION;EXPRECTED RESULT;fail
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
+;3;nie wpisuje ¿adnych danych i klikam przycisk wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em;
+;4;w telefonie klikam przycisk back;pojawa siê ekran logowania;
+;STORY 6;;;
+;;;;
+24;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
+;5;wpisuje poprawne stare has³o oraz nowe has³o:abbbba i klikam wyœlij;pojawia sie dialogbox potwierdzaj¹cy zmiane has³a;
+;6;klikam ok;pojawia sie menu g³ówne;
+;;;;
+25;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
+;5;wpisuje poprawne stare has³o oraz nowe has³o:andrzejek@op.pl i klikam wyœlij;pojawia sie dialogbox z informacja o Ÿle podanym haœle;
+;;;;
+26;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ;
+;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
+;6;wpisuje poprawne takie samo nowe has³o i stare has³o i klikam wyœlij;pojawia sie dialogbox z informacja ¿e nowe has³o i stare s¹ identyczne;
+;;;;
+27;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ;
+;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
+;6;wpisuje nie poprawne stare has³o i nowe has³o i klkam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle;
+;;;;
+28;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ;
+;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
+;6;zostawiam puste pola nowe has³o i stare has³o i klikam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle;
+;;;;
+29;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ;
+;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
+;6;wpisuje poprawne stare has³o i zostawiam puste pole nowe has³o i klikam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle;
+;;;;
+30;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;poajawia siê ekran ustaiwñ;
+;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
+;6;zostawiam puste pole stare has³o i wpisuje nowe has³o i klikam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle;
+;STORY 7;;;
+;;;;
+31;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania;
+;;;;
+32;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania z wype³nionymi polami login i has³o;
+;5;klikam zaloguj;pojawia siê ekran g³ówny;
+;;;;
+33;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania z wype³nionymi polami login i has³o;
+;5;klikam zaloguj;pojawia siê ekran g³ówny;
+;;;;
+34;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustwienia;pojawia sie ekran z ustawieniami;
+;5;w telefonie klikam przycisk back;pojawia siê menu g³ówne;
+;6;klikam na przycisk wloguj siê;pojawia sie ekran logowania z wype³nionymi polami login i has³o;
+;7;klikam zaloguj;pojawia siê ekran g³ówny;
+;STORY 8;;;
+;;;;
+35;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;;;;
+36;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk powrót;pojawia siê ekran g³ówny;
+;;;;
+37;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;poruszam siê po mapie;zmiana po³o¿enia olaz skali mapy z ekranu g³ównego;
+;4;klikam na przycisk menu;pojawia siê ekran g³ówny;
+;STORY 9;;;
+;;;;
+38;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami;
+;;;;
+39;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami;
+;5;w telefonie klikam przycisk back;pojawia siê menu g³ówne;
+;;;;
+40;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk powrót;pojawia siê ekran g³ówny;
+;5;poruszam siê po mapie i klikam menu;pojawia siê menu g³ówne;
+;6;klikam na przycisk ustawienia;pojawia siê ekran z ustawieniami;
+;;;;
+41;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk znajmoi;pojawia siê ekran ze znajomymi;
+;5;w telefonie klikam na przycisk back;pojawia siê menu g³ówne;
+;6;klikam na przycisk ustawienia;pojawia siê ekran z ustawieniami;
+;STORY 10;;;
+;;;;
+42;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk znajomi;pojawia sie ekran ze znajomymi;
+;;;;
+43;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk znajomi;pojawia sie ekran ze znajomymi;
+;4;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
+;;;;
+44;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk powrót;pojawia siê ekran g³ówny;
+;5;poruszam siê po mapie i klikam menu;pojawia siê menu g³ówne;
+;6;klikam na przycisk znajomi;pojawia siê ekran ze znajomymi;
+;;;;
+45;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami;
+;5;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
+;6;klikam na przycisk znajomi;pojawia siê ekran ze znajomymi;
+;STORY 11;;;
+;;;;
+46;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami;
+;;;;
+47;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami;
+;4;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
+;;;;
+48;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk about;pojawia sie ekran z informacjami o aplikacji;
+;5;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
+;6;klikam na przycisk zaproszenia;pojawia siê ekran z zaproszeniami;
+;;;;
+49;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami;
+;5;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
+;6;klikam na przycisk zaproszenia;pojawia siê ekran z zaproszeniami;
+;;;;
+50;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk powrót;pojawia siê ekran g³ówny;
+;5;poruszam siê po mapie i klikam menu;pojawia siê menu g³ówne;
+;6;klikam na przycisk zaproszenia;pojawia siê ekran z zaproszeniami;
+;STORY 12;;;
+;;;;
+51;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami;
+;5;klikam na zaproszenie;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?";
+;6;klikam akceptuj;dodaje osobe do znajomych;
+;;;;
+52;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami;
+;5;klikam na zaproszenia;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?";
+;6;klikam odzruæ;odzruca zaproszenie i usuwa je z listy;
+;;;;
+53;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami;
+;5;klikam na zaproszenia;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?";
+;6;klikam póŸniej;wraca do ekranu zaproszeñ nic nie zmieniaj¹c;
+;;;;
+54;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk zaproszenia nie maj¹c ¿adnych zaproszeñ;pojawia sie ekran z informacj¹ brak zaproszeñ;
+;;;;
+55;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami;
+;5;w telefonie klikam na przycisk back;pojawia siê menu g³ówne;
+;6;klikam na zaproszenia;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?";
+;7;klikam odzruæ;odzruca zaproszenie i usuwa je z listy;
+;;;;
+56;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;klikam na przycisk menu;pojawia siê menu g³ówne;
+;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami;
+;5;w telefonie klikam na przycisk back;pojawia siê menu g³ówne;
+;6;klikam na przycisk znajomi;pojawia sie ekran ze znajomymi;
+;7;w telefonie klikam na przycisk back;pojawia siê menu g³ówne;
+;8;klikam na zaproszenia;"wyœwietlaj¹ mi siê jeg dane oraz zapytanie ""Czy chcesz udostêpniæ mu swoj¹ pozycje?";
+;9;klikam odzruæ;odzruca zaproszenie i usuwa je z listy;
+;Story 13;;;
+;;;;
+57;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
+;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
+;;;;
+;;;;
+58;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
+;4;Klikam przycisk Ustawienia;Otwiera sie menu ustawieñ;
+;5;Klikam przycisk wróæ;Pojawia siê menu g³ówne;
+;6;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
+;;;;
+59;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
+;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
+;;;;
+60;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
+;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
+;;;;
+61;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
+;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
+;;;;
+62;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
+;4;Klikam przycisk znajomi;pojawia siê menu znajomych;
+;5;Klikam przycisk Powrót;Wraca do menu g³ownego;
+;6;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
+;Story 14;;;
+;;;;
+63;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 1 od góry;Pokazujê mape z lokalizacja znajomego;
+;;;;
+64;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie PUSTA lista znajomych;
+;;;;
+65;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 2 od góry;Pokazujê mape z lokalizacja znajomego;
+;;;;
+66;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 3 od góry;Pokazujê mape z lokalizacja znajomego;
+;;;;
+67;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 1 od do³u listy;Pokazujê mape z lokalizacja znajomego;
+;Story 15;;;
+68;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 1 od góry;Pokazujê mape z lokalizacja znajomego;
+;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje;
+;;;;
+69;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 5 od góry;Pojawia siê mapa z lokalizacj¹ znajomego;
+;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje;
+;;;;
+70;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 2 od góry;Pokazujê mape z lokalizacja znajomego;
+;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje;
+;;;;
+71;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 3 od góry;Pokazujê mape z lokalizacja znajomego;
+;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje;
+;;;;
+72;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 1 od do³u listy;Pokazujê mape z lokalizacja znajomego;
+;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje;
+;Story 16;;;
+73;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 1 od góry;Pokazujê mape z lokalizacja znajomego;
+;;;;
+74;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 2 od góry;Pokazujê mape z lokalizacja znajomego;
+;;;;
+75;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr2 od góry;Pokazujê mape z lokalizacja znajomego;
+;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje;
+;;;;
+76;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 3 od góry;Dymek z informacj¹ – brak lokalizacji;
+;;;;
+77;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 4 od góry;Pokazujê mape z lokalizacja znajmegoo;
+;Story 17;;;
+78;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹;
+;;;;
+79;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Menu;Pojawia sie Menu;
+;4;Klikam na przycisk Powrót;Pojawia siê Ekran g³ówny;
+;5;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹;
+;;;;
+80;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi;Pojawia sie menu znajomych;
+;4;Klikam na przycisk Powrót;Pojawia siê Ekran g³ówny;
+;5;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹;
+;;;;
+81;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Menu;Pojawia sie Menu;
+;4;Klikam na przycisk About;Pojawia siê okno z informacjami;
+;5;Klikam na przycisk Powrót;Pojawia siê menu g³ówne;
+;6;Klikam na przycisk Powrót;Pojawia sie ekran g³ówny;
+;7;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹;
+;;;;
+82;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;pojawia siê menu g³ówne;
+;4;Klikam na przycisk Pomoc;Pojawia siê okno z informacjami;
+;5;Klikam na przycisk Powrót;Pojawia siê menu g³ówne;
+;6;Klikam na przycisk Powrót;Pojawia sie ekran g³ówny;
+;7;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹;
+;Story 18;;;
+83;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
+;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
+;7;Wpisuje „Ala ma kota” i klikam ok;Pojawia siê komunikat „Niepoprawny email”;
+;;;;
+84;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
+;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
+;7;Wpisuje „patryk@fuhrman.pl” i klikam ok;Pojawia siê komunikat „Zosta³ wys³any email.”;
+;8;Klikam ok;Przenosi do ekranu g³ownego;
+;;;;
+85;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
+;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
+;7;"Wpisuje „sdlkj;afsl” i klikam ok";Pojawia siê komunikat „Niepoprawny email”;
+;;;;
+86;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
+;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
+;7;"Wpisuje „; DROP DATABASE users;” i klikam ok";Pojawia siê komunikat „Niepoprawny email”;
+;;;;
+87;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
+;5;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
+;7;Wpisuje „+48790545768” i klikam ok;Pojawia siê komunikat „Niepoprawny email”;
+;Story 19;;;
+88;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych;
+;;;;
+89;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Wróæ;Pojawia siê ekran g³ówny;
+;5;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych;
+;;;;
+90;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk „Moja lokalizacja”;Mapa przenosi siê na moj¹ lokalizacjê;
+;4;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych;
+;;;;
+;;;;
+91;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;4;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;5;Klikam na przycisk Wróæ;Pojawia siê ekran g³ówny;
+;6;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych;
+;;;;
+92;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;4;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;5;Klikam na przycisk „About”;Pojawiaj¹ siê informacje o programie;
+;6;Klikam na przycisk Wróæ;Pojawia siê menu g³owne;
+;5;Klikam na przycisk Wróæ;Pojawia siê ekran g³ówny;
+;6;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych;
+;Story 20;;;
+;;;;
+93;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;5;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami;
+;6;Wybieram opcje 30sek i klikam ok;Pojawia siê menu ustawieñ;
+;;;;
+94;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;5;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami;
+;6;Wybieram opcje 1min i klikam ok;Pojawia siê menu ustawieñ;
+;;;;
+95;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;5;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami;
+;6;Wybieram opcje 3min i klikam ok;Pojawia siê menu ustawieñ;
+;;;;
+96;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;5;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami;
+;6;Klikam ok;Pojawia siê menu ustawieñ;
+;;;;
+97;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Znajomi;Pojawia siê lista znajomych;
+;5;Klikam na przycisk wróæ;Pojawia siê menu g³ówne;
+;6;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;7;Klikam na przycisk Czêstotliwoœæ aktualizacji;Pojawia siê lista z opcjami;
+;8;Wybieram opcje 3min i klikam ok;Pojawia siê menu ustawieñ;
+;Story 21;;;
+;;;;
+98;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk About;Pojawia siê informacja o programie;
+;;;;
+99;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Ustawienia;Pojawia siê menu ustawieñ;
+;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne;
+;6;Klikam na przycisk About;Pojawia siê informacja o programie;
+;;;;
+100;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Znajomi;Pojawia siê lista znajomych;
+;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne;
+;6;Klikam na przycisk About;Pojawia siê informacja o programie;
+;;;;
+101;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Zaproszenia;Pojawia siê lista zaproszeñ;
+;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne;
+;6;Klikam na przycisk About;Pojawia siê informacja o programie;
+;;;;
+102;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;4;Klikam na przycisk Pomoc;Pojawia siê informacje o pomocy;
+;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne;
+;6;Klikam na przycisk About;Pojawia siê informacja o programie;
+;;;;
+103;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 2 od góry;Pokazujê mape z lokalizacja znajomego;
+;;;;
+;;;;
+104;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr2 od góry;Pokazujê mape z lokalizacja znajomego;
+;5;Klikam na dymek z informacjami;Ukazuj¹ siê informacje;
+;;;;
+105;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 3 od góry;Dymek z informacj¹ – brak lokalizacji;
+;;;;
+106;STEPID;ACTION;EXPRECTED RESULT;
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;Klikam przycisk Znajomi na górze ekranu;Pojawia sie lista znajomych;
+;4;Wybieram znajomego nr 4 od góry;Pokazujê mape z lokalizacja znajmegoo;
+;STORY 22;;;
+;;;;
+107;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam na przycisk Menu;Otwiera siê Menu;
+;2;Klikam na przycisk Znajomi;Otwiera siê lista znajomych;
+;3;Klikam na 1 znajomego;Pokazuj¹ siê dane znajomego;
+;4;Klikam przycisk Poka¿ na mapie;Pokazuje znajomego na mapie;
+;;;;
+108;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam na przycisk Menu;Otwiera siê Menu;
+;2;Klikam na przycisk Znajomi;Otwiera siê lista znajomych;
+;3;Klikam na 2 znajomego;Pokazuj¹ siê dane znajomego;
+;4;Klikam przycisk Poka¿ na mapie;Pokazuje znajomego na mapie;
+;STORY 23;;;
+;;;;
+109;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam przycisk Menu;W³¹cza siê Menu;
+;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
+;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
+;4;Wype³niam pola Temat i Wiadomoœæ i klikam wyœlij;Ukazuje siê informacja o wys³aniu Wiadomoœci;
+;;;;
+110;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam przycisk Menu;W³¹cza siê Menu;
+;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
+;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
+;4;Nie wype³niam pól i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól;
+;;;;
+111;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam przycisk Menu;W³¹cza siê Menu;
+;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
+;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
+;4;Nie wype³niam pola Temat i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól;
+;;;;
+112;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam przycisk Menu;W³¹cza siê Menu;
+;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
+;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
+;4;Nie wype³niam pola Wiadomoœæ i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól;
+;;;;
+113;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam przycisk Menu;W³¹cza siê Menu;
+;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
+;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
+;4;Wype³niam pola samymi cyframi;Ukazuje siê informacja o B³êdnym wype³nieniu;
+;STORY 24;;;
+;;;;
+114;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam Menu;Ukazuje siê Menu;
+;2;Klikam na Znajomi;Pojawia siê lista znajomych;
+;3;Wybieram znajomego numer 1;Pokazuj¹ siê dane o znajomym;
+;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê;
+;5;Wybieram telefon;Dzwoniê do znajomego numer 1;
+;;;;
+115;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam Menu;Ukazuje siê Menu;
+;2;Klikam na Znajomi;Pojawia siê lista znajomych;
+;3;Wybieram znajomego numer 2;Pokazuj¹ siê dane o znajomym;
+;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê;
+;5;Wybieram telefon;Dzwoniê do znajomego numer 2;
+;;;;
+116;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam Menu;Ukazuje siê Menu;
+;2;Klikam na Znajomi;Pojawia siê lista znajomych;
+;3;Wybieram znajomego numer 3;Pokazuj¹ siê dane o znajomym;
+;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê;
+;5;Wybieram telefon;Dzwoniê do znajomego numer 3;
+;;;;
+117;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam Menu;Ukazuje siê Menu;
+;2;Klikam na Znajomi;Pojawia siê lista znajomych;
+;3;Wybieram znajomego numer 4;Pokazuj¹ siê dane o znajomym;
+;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê;
+;5;Wybieram telefon;Dzwoniê do znajomego numer 4;
+;;;;
+118;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam Menu;Ukazuje siê Menu;
+;2;Klikam na Znajomi;Pojawia siê lista znajomych;
+;3;Wybieram znajomego numer 5;Pokazuj¹ siê dane o znajomym;
+;4;Klikam na jego numer telefonu;Android pyta jak dokoñczyæ akcjê;
+;5;Wybieram telefon;Dzwoniê do znajomego numer 5;
+;STORY 25;;;
+;;;;
+119;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wykonujê na mapie gest rozsze¿enia dwoma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;;;;
+120;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wykonujê na menu gest rozsze¿ania;Wygl¹d interfejsu nie ulega zmianie;
+;;;;
+121;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wykonujê na mapie gest rozsze¿enia trzema palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;;;;
+122;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wykonujê na mapie gest rozsze¿enia czterema palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;;;;
+123;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wykonujê na mapie gest rozsze¿enia piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;STORY 26;;;
+;;;;
+124;STEPID;ACTION;EXPRECTED RESULT;
+;1;Dotykam jednym palcem na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku;
+;;;;
+;STEPID;ACTION;EXPRECTED RESULT;
+125;1;Dotykam dwoma palcami na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku;
+;;;;
+126;STEPID;ACTION;EXPRECTED RESULT;
+;1;Dotykam trzema palcami na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku;
+;;;;
+127;STEPID;ACTION;EXPRECTED RESULT;
+;1;Dotykam czterema palcami na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku;
+;;;;
+128;STEPID;ACTION;EXPRECTED RESULT;
+;1;Dotykam piêcioma palcami na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku;
+;STORY 27;;;
+;;;;
+129;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków;
+;2;Wybieram widok Satelitarny;Mapa zmienia wygl¹d na satelitarny;
+;3;Wy³¹czam program;Program siê zamyka;
+;4;W³¹czam program od nowa;Program uruchamia sie;
+;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem satelitarnym;
+;;;;
+130;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków;
+;2;Wybieram widok Ruchu;Mapa zmienia wygl¹d na widok ruchu;
+;3;Wy³¹czam program;Program siê zamyka;
+;4;W³¹czam program od nowa;Program uruchamia sie;
+;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem ruchu;
+;;;;
+131;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków;
+;2;Wybieram widok Terenu;Mapa zmienia wygl¹d na widok terenu;
+;3;Wy³¹czam program;Program siê zamyka;
+;4;W³¹czam program od nowa;Program uruchamia sie;
+;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem terenu;
+;;;;
+132;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków;
+;2;Wybieram widok Linii komunikacyjnych;Mapa zmienia wygl¹d na widok linii komunikacyjnych;
+;3;Wy³¹czam program;Program siê zamyka;
+;4;W³¹czam program od nowa;Program uruchamia sie;
+;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem linii komunikacyjnych;
+;;;;
+133;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam na przycisk Warstwy;Ukazuje siê lista mo¿liwych widoków;
+;2;Wybieram widok Wikipedii;Mapa zmienia wygl¹d na widok wikipedii;
+;3;Wy³¹czam program;Program siê zamyka;
+;4;W³¹czam program od nowa;Program uruchamia sie;
+;5;Logujê siê;Pokazuje siê mapa z zapisanym widokiem wikipedii;
+;STORY 28;;;
+;;;;
+134;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wchodzê do menu;Ukazuje siê menu;
+;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy;
+;3;"Wybieram opcjê ""Jak dodaæ znajomego?""";Ukazuje siê tekst pomocy na temat dodawania znajomego;
+;;;;
+135;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wchodzê do menu;Ukazuje siê menu;
+;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy;
+;3;"Wybieram opcjê ""Jak siê wylogowaæ?""";Ukazuje siê tekst pomocy na temat wylogowywania;
+;;;;
+136;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wchodzê do menu;Ukazuje siê menu;
+;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy;
+;3;"Wybieram opcjê ""Jak wyjœæ z programu?""";Ukazuje siê tekst pomocy na temat wy³¹czania programu;
+;;;;
+137;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wchodzê do menu;Ukazuje siê menu;
+;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy;
+;3;"Wybieram opcjê ""Jak zmieniæ has³o?""";Ukazuje siê tekst pomocy na temat zmiany has³a;
+;;;;
+138;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wchodzê do menu;Ukazuje siê menu;
+;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy;
+;3;"Wybieram opcjê ""Jak usun¹æ znajomego?""";Ukazuje siê tekst pomocy na temat usuwania znajomego;
+;STORY 29;;;
+;;;;
+139;STEPID;ACTION;EXPRECTED RESULT;
+;1;Klikam na wskazówkê kompasu znajduj¹c¹ siê na mapie;Mapa wraca do domyœlnego po³o¿enia z pó³noc¹ na górze;
+;;;;
+140;STEPID;ACTION;EXPRECTED RESULT;
+;1;Dotykam ekran dwoma palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;
+;;;;
+141;STEPID;ACTION;EXPRECTED RESULT;
+;1;Dotykam ekran piêcioma palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;
+;;;;
+142;STEPID;ACTION;EXPRECTED RESULT;
+;1;Dotykam ekran trzema palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;
+;;;;
+143;STEPID;ACTION;EXPRECTED RESULT;
+;1;Dotykam ekran czterema palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;
+;STORY 30;;;
+;;;;
+144;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;Wykonujê na mapie gest szczypania dwoma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;;;;
+145;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;Wykonujê na menu gest szczypania;Wygl¹d interfejsu nie ulega zmianie;
+;;;;
+146;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wykonujê na mapie gest szczypania trzema palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;;;;
+147;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wykonujê na mapie gest szczypania czterema palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;;;;
+148;STEPID;ACTION;EXPRECTED RESULT;
+;1;Wykonujê na mapie gest szczypania piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;;;;
+149;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;4;Klikam na przycisk Menu;Pojawia siê menu g³owne;
+;5;Klikam na przycisk „About”;Pojawiaj¹ siê informacje o programie;
+;6;Klikam na przycisk Wróæ;Pojawia siê menu g³owne;
+;5;Klikam na przycisk Wróæ;Pojawia siê ekran g³ówny;
+;7;Wykonujê na mapie gest szczypania piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;;;;
+150;STEPID;ACTION;EXPRECTED RESULT;pass
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;
+;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
+;3;poruszam siê po mapie;zmiana po³o¿enia olaz skali mapy z ekranu g³ównego;
+;4;klikam na przycisk menu;pojawia siê ekran g³ówny;
+;5;Wykonujê na mapie gest szczypania piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
