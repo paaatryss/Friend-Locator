@@ -42,7 +42,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	public ArrayAdapter aa;
 	public String[] items1; */
 	
-	ArrayList<Friend> friends;
+	static ArrayList<Friend> friends;
 	public static MapView mapView;
 	public static int i=1;
 	public static int ch=0;
@@ -104,15 +104,17 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     @Override
     public void onResume() {
         super.onResume();
-        locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,10000.0f,onLocationChange);
+        //locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,10000.0f,onLocationChange);
         locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,10000.0f,onLocationChange);
     }
+    static CustomItemizedOverlay itemizedOverlayrem=null;
     static CustomItemizedOverlay meold=null;
     public void update(){
     	MapController mapController = mapView.getController();
     	List mapOverlays = mapView.getOverlays();
-    	if(meold!=null){
+    	if(meold!=null || itemizedOverlayrem==null){
     		mapOverlays.remove(meold);
+    		itemizedOverlayrem.remove();
     	}
     	Drawable drawable = this.getResources().getDrawable(R.drawable.map_point);
     	CustomItemizedOverlay me = new CustomItemizedOverlay(
@@ -136,28 +138,47 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
         mapView.setSatellite(value1);
         mapView.invalidate();
     }
-    
-    public void draw(){
+    static public Context re=null;
+    static Drawable drawablere=null;
+    static Drawable drawablerem=null;
+    static CustomItemizedOverlay itemizedOverlayre=null;
+    public static void draw(){
+    	while(re==null){
+    		
+    	}
+        drawablere = re.getResources().getDrawable(R.drawable.google);
+        drawablerem = re.getResources().getDrawable(R.drawable.map_point);
+    	itemizedOverlayre = new CustomItemizedOverlay(drawablere, re);
+    	itemizedOverlayrem = new CustomItemizedOverlay(drawablerem, re);
 		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
 		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
-		
-		Drawable drawable = this.getResources().getDrawable(R.drawable.google); /**/
 		List mapOverlays = mapView.getOverlays();
 		Log.d("ilosc znajomych update!!!!!!!!!!!!!!", Integer.toString(friends.size()));
+		if(mapOverlays==null || itemizedOverlayre==null){
+		}
+		else{
+		mapOverlays.clear();
+		itemizedOverlayre.remove();
+		itemizedOverlayrem.remove();
 		for(int i=0; i<friends.size(); i++)
 		{
 			Friend fr = friends.get(i);
 			Log.d("latiutude", Integer.toString(fr.getLatitude()));
-			/*items1[i] = (fr.getName() + ", " + fr.getLogin());*/
-			CustomItemizedOverlay itemizedOverlay = new CustomItemizedOverlay(
-					drawable, this);
 			GeoPoint point = new GeoPoint(fr.getLatitude(), fr.getLongitude());
 			OverlayItem overlayitem = new OverlayItem(point, fr.getName(),
 					fr.getLogin());
-			itemizedOverlay.addOverlay(overlayitem);
-			mapOverlays.add(itemizedOverlay);
+			itemizedOverlayre.addOverlay(overlayitem);
+			mapOverlays.add(itemizedOverlayre);
 			MapController mapController = mapView.getController();
+			mapView.postInvalidate();
+		}
+		if(pointme!=null){
+		OverlayItem overlayitem = new OverlayItem(pointme, "Me","I'm hear");
+		itemizedOverlayrem.addOverlay(overlayitem);
+		mapOverlays.add(itemizedOverlayrem);
+		}
+
 		}
     }
     public Handler handler=new Handler();
@@ -169,6 +190,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 		setContentView(R.layout.activity_okno_menu);
+		re=(Context)this;
 /*		Log.d("onCreate", "0");
 		spin = (Spinner) findViewById(R.id.spinner1);
 		Log.d("onCreate", "1");
@@ -184,8 +206,8 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 		//mytext = (TextView) findViewById(R.id.mytext);
         
         //grab the location manager service
+		dataupdate.run2();
         locmgr = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-  
         //mytext.setText("Oczekiwanie na lokalizacje");
         
 		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
@@ -236,15 +258,11 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 			
 		}
 
-		OverlayItem overlayitem = new OverlayItem(point, "Hello",
-				"I'm in Athens, Greece!");
 		OverlayItem overlayitem2 = new OverlayItem(point2, "Hello",
 				"Hala Madrid");
 
-		itemizedOverlay.addOverlay(overlayitem);
 		itemizedOverlay2.addOverlay(overlayitem2);
 		
-		mapOverlays.add(itemizedOverlay);
 		mapOverlays.add(itemizedOverlay2);
 
 		MapController mapController = mapView.getController();
@@ -269,7 +287,6 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	 public boolean onKeyDown(int keyCode, KeyEvent event) {
 	      Log.d(null,"In on Key Down");
 	      if (keyCode == KeyEvent.KEYCODE_BACK) {
-	    	  Log.d(null,"tuttttttttttttttttt");
 	    	  AlertDialog.Builder builder = new AlertDialog.Builder(this);
 	      	builder
 	      	.setTitle("Chcesz wyjœæ z aplikacji")
