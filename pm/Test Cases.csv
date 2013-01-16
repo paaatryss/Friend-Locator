@@ -39,17 +39,17 @@ Test case nr;STORY 1;;;
 ;2;Klikam na przycisk zarejestruj siê;przechodzi do okna rejestracja;
 ;3;wpisuje login:user email:user@gmail.com has³o:user33 i klikam przycisk zarejestruj siê;pojawia siê okno  informuj¹ce ¿e podany login jest juz zajêty;
 ;STORY 3;;;
-10;STEPID;ACTION;EXPRECTED RESULT;fail
+10;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
 ;2;Wpisuje poprawny login i haslo, zaznaczam zapamietaj login i haslo i klikam zaloguj;Pojawia sie ekran glowny;
 ;3;Zamykam aplikacje;Widze appdrawer;
 ;4;Wlaczam aplikacje ponownie;Pojawia sie ekran glowny;
 ;;;;
-11;STEPID;ACTION;EXPRECTED RESULT;fail
+11;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
 ;2;Wpisuje niepoprawny login i haslo, zaznaczam zapamietaj login i haslo, i klikam zaloguj;pojawia sie informacja o zlym loginie lub hasle;
 ;;;;
-12;STEPID;ACTION;EXPRECTED RESULT;fail
+12;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;Ukazuje siê erkan logowania;
 ;1;Zostawiam puste pole loginu i hasla, zaznaczam zapamietaj login i haslo, i klikam zaloguj;pojawia sie informacja o zlym loginie lub hasle;
 ;STORY 4;;;
@@ -80,28 +80,28 @@ Test case nr;STORY 1;;;
 ;3;w telefonie klikam przycisk back;pojawia siê okno logowania z pustymi polami login i has³o;
 ;STORY 5;;;
 ;;;;
-19;STEPID;ACTION;EXPRECTED RESULT;fail
+19;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
 ;3;wpisuje poprawny login i klikam wyœlij;pojawia siê dialogbox  z potwierdzeniem wys³ania nowego has³a;
 ;4;klikam ok;pojawia siê okno logowania;
 ;;;;
 20;STEPID;ACTION;EXPRECTED RESULT;
-;1;W³¹czam aplikacje;pojawia sê ekran logowania;fail
+;1;W³¹czam aplikacje;pojawia sê ekran logowania;pass
 ;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
 ;3;wpisuje nie poprawny login i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em;
 21;;;;
-;STEPID;ACTION;EXPRECTED RESULT;fail
+;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
 ;3;zostawiam pole login puste i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em;
 ;;;;
-22;STEPID;ACTION;EXPRECTED RESULT;fail
+22;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
 ;3;wpisuje w oknie login adres mailowy i klikam wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em;
 ;;;;
-23;STEPID;ACTION;EXPRECTED RESULT;fail
+23;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;klikam na przycisk zapomnia³em has³a;pojawia siê ekran do odzyskiwania has³a;
 ;3;nie wpisuje ¿adnych danych i klikam przycisk wyœlij;pojawia siê dialogbox  z Ÿle podanym has³em;
@@ -155,7 +155,7 @@ Test case nr;STORY 1;;;
 ;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
 ;6;wpisuje poprawne stare has³o i zostawiam puste pole nowe has³o i klikam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle;
 ;;;;
-30;STEPID;ACTION;EXPRECTED RESULT;
+30;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
@@ -163,28 +163,28 @@ Test case nr;STORY 1;;;
 ;5;klikam na przycisk zmieñ has³o;pojawia sie ekran do zmiany has³a;
 ;6;zostawiam puste pole stare has³o i wpisuje nowe has³o i klikam wyœlij;pojawia sie dialogbox z informacj¹ o Ÿle podanym haœle;
 ;STORY 7;;;
-;;;;
+;;;;pass
 31;STEPID;ACTION;EXPRECTED RESULT;
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania;
 ;;;;
-32;STEPID;ACTION;EXPRECTED RESULT;
+32;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania z wype³nionymi polami login i has³o;
 ;5;klikam zaloguj;pojawia siê ekran g³ówny;
 ;;;;
-33;STEPID;ACTION;EXPRECTED RESULT;
+33;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk wloguj siê;pojawia sie ekran logowania z wype³nionymi polami login i has³o;
 ;5;klikam zaloguj;pojawia siê ekran g³ówny;
 ;;;;
-34;STEPID;ACTION;EXPRECTED RESULT;
+34;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;klikam zapamiêtaj has³o wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
@@ -194,38 +194,38 @@ Test case nr;STORY 1;;;
 ;7;klikam zaloguj;pojawia siê ekran g³ówny;
 ;STORY 8;;;
 ;;;;
-35;STEPID;ACTION;EXPRECTED RESULT;
+35;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;;;;
-36;STEPID;ACTION;EXPRECTED RESULT;
+36;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk powrót;pojawia siê ekran g³ówny;
 ;;;;
-37;STEPID;ACTION;EXPRECTED RESULT;
+37;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;poruszam siê po mapie;zmiana po³o¿enia olaz skali mapy z ekranu g³ównego;
 ;4;klikam na przycisk menu;pojawia siê ekran g³ówny;
 ;STORY 9;;;
 ;;;;
-38;STEPID;ACTION;EXPRECTED RESULT;
+38;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami;
 ;;;;
-39;STEPID;ACTION;EXPRECTED RESULT;
+39;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk ustawienia;pojawia sie ekran z ustawieniami;
 ;5;w telefonie klikam przycisk back;pojawia siê menu g³ówne;
 ;;;;
-40;STEPID;ACTION;EXPRECTED RESULT;
+40;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
@@ -233,7 +233,7 @@ Test case nr;STORY 1;;;
 ;5;poruszam siê po mapie i klikam menu;pojawia siê menu g³ówne;
 ;6;klikam na przycisk ustawienia;pojawia siê ekran z ustawieniami;
 ;;;;
-41;STEPID;ACTION;EXPRECTED RESULT;
+41;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
@@ -242,12 +242,12 @@ Test case nr;STORY 1;;;
 ;6;klikam na przycisk ustawienia;pojawia siê ekran z ustawieniami;
 ;STORY 10;;;
 ;;;;
-42;STEPID;ACTION;EXPRECTED RESULT;
+42;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk znajomi;pojawia sie ekran ze znajomymi;
-;;;;
+;;;;pass
 43;STEPID;ACTION;EXPRECTED RESULT;
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
@@ -255,7 +255,7 @@ Test case nr;STORY 1;;;
 ;4;klikam na przycisk znajomi;pojawia sie ekran ze znajomymi;
 ;4;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
 ;;;;
-44;STEPID;ACTION;EXPRECTED RESULT;
+44;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
@@ -263,7 +263,7 @@ Test case nr;STORY 1;;;
 ;5;poruszam siê po mapie i klikam menu;pojawia siê menu g³ówne;
 ;6;klikam na przycisk znajomi;pojawia siê ekran ze znajomymi;
 ;;;;
-45;STEPID;ACTION;EXPRECTED RESULT;
+45;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
@@ -272,19 +272,19 @@ Test case nr;STORY 1;;;
 ;6;klikam na przycisk znajomi;pojawia siê ekran ze znajomymi;
 ;STORY 11;;;
 ;;;;
-46;STEPID;ACTION;EXPRECTED RESULT;
+46;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami;
 ;;;;
-47;STEPID;ACTION;EXPRECTED RESULT;
+47;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
 ;4;klikam na przycisk zaproszenia;pojawia sie ekran z zaproszeniami;
 ;4;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
-;;;;
+;;;;pass
 48;STEPID;ACTION;EXPRECTED RESULT;
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
@@ -293,7 +293,7 @@ Test case nr;STORY 1;;;
 ;5;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
 ;6;klikam na przycisk zaproszenia;pojawia siê ekran z zaproszeniami;
 ;;;;
-49;STEPID;ACTION;EXPRECTED RESULT;
+49;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
@@ -301,7 +301,7 @@ Test case nr;STORY 1;;;
 ;5;w telefonie klikam przycisk back;pojawia sie menu g³ówne;
 ;6;klikam na przycisk zaproszenia;pojawia siê ekran z zaproszeniami;
 ;;;;
-50;STEPID;ACTION;EXPRECTED RESULT;
+50;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;klikam na przycisk menu;pojawia siê menu g³ówne;
@@ -368,7 +368,7 @@ Test case nr;STORY 1;;;
 ;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
 ;;;;
 ;;;;
-58;STEPID;ACTION;EXPRECTED RESULT;
+58;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
@@ -376,25 +376,25 @@ Test case nr;STORY 1;;;
 ;5;Klikam przycisk wróæ;Pojawia siê menu g³ówne;
 ;6;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
 ;;;;
-59;STEPID;ACTION;EXPRECTED RESULT;
+59;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
 ;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
 ;;;;
-60;STEPID;ACTION;EXPRECTED RESULT;
+60;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
 ;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
 ;;;;
-61;STEPID;ACTION;EXPRECTED RESULT;
+61;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
 ;4;Klikam przycisk WyjdŸ;Aplikacja zamyka siê;
 ;;;;
-62;STEPID;ACTION;EXPRECTED RESULT;
+62;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;Otwiera menu przyciskiem na g³ównym ekranie;pojawia siê menu g³ówne;
@@ -535,7 +535,7 @@ Test case nr;STORY 1;;;
 ;6;Klikam na przycisk Powrót;Pojawia sie ekran g³ówny;
 ;7;Klikam przycisk „Moja lokalizacja” w rogu ekranu;Pokazujê mape z moj¹ lokalizacj¹;
 ;Story 18;;;
-83;STEPID;ACTION;EXPRECTED RESULT;
+83;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
@@ -543,7 +543,7 @@ Test case nr;STORY 1;;;
 ;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
 ;7;Wpisuje „Ala ma kota” i klikam ok;Pojawia siê komunikat „Niepoprawny email”;
 ;;;;
-84;STEPID;ACTION;EXPRECTED RESULT;
+84;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
@@ -552,7 +552,7 @@ Test case nr;STORY 1;;;
 ;7;Wpisuje „patryk@fuhrman.pl” i klikam ok;Pojawia siê komunikat „Zosta³ wys³any email.”;
 ;8;Klikam ok;Przenosi do ekranu g³ownego;
 ;;;;
-85;STEPID;ACTION;EXPRECTED RESULT;
+85;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
@@ -560,7 +560,7 @@ Test case nr;STORY 1;;;
 ;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
 ;7;"Wpisuje „sdlkj;afsl” i klikam ok";Pojawia siê komunikat „Niepoprawny email”;
 ;;;;
-86;STEPID;ACTION;EXPRECTED RESULT;
+86;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
@@ -568,7 +568,7 @@ Test case nr;STORY 1;;;
 ;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
 ;7;"Wpisuje „; DROP DATABASE users;” i klikam ok";Pojawia siê komunikat „Niepoprawny email”;
 ;;;;
-87;STEPID;ACTION;EXPRECTED RESULT;
+87;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;4;Klikam na przycisk Menu;Pojawia siê menu g³ówne;
@@ -576,12 +576,12 @@ Test case nr;STORY 1;;;
 ;6;Klikam na przycisk Zmieñ Email;Pojawia sie ekran zmiany email;
 ;7;Wpisuje „+48790545768” i klikam ok;Pojawia siê komunikat „Niepoprawny email”;
 ;Story 19;;;
-88;STEPID;ACTION;EXPRECTED RESULT;
+88;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;Klikam na przycisk Znajomi;Pojawia siê Lista znajomych;
 ;;;;
-89;STEPID;ACTION;EXPRECTED RESULT;
+89;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
@@ -685,7 +685,7 @@ Test case nr;STORY 1;;;
 ;5;Klikam na przycisk „Powrót”;Pojawia siê menu g³ówne;
 ;6;Klikam na przycisk About;Pojawia siê informacja o programie;
 ;;;;
-102;STEPID;ACTION;EXPRECTED RESULT;
+102;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;W³¹czam aplikacje;pojawia sê ekran logowania;
 ;2;wpisuje poprawny login i has³o;pojawia sie ekran g³ówny;
 ;3;Klikam na przycisk Menu;Pojawia siê menu g³owne;
@@ -733,31 +733,31 @@ Test case nr;STORY 1;;;
 ;4;Klikam przycisk Poka¿ na mapie;Pokazuje znajomego na mapie;
 ;STORY 23;;;
 ;;;;
-109;STEPID;ACTION;EXPRECTED RESULT;
+109;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Klikam przycisk Menu;W³¹cza siê Menu;
 ;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
 ;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
 ;4;Wype³niam pola Temat i Wiadomoœæ i klikam wyœlij;Ukazuje siê informacja o wys³aniu Wiadomoœci;
 ;;;;
-110;STEPID;ACTION;EXPRECTED RESULT;
+110;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Klikam przycisk Menu;W³¹cza siê Menu;
 ;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
 ;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
 ;4;Nie wype³niam pól i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól;
 ;;;;
-111;STEPID;ACTION;EXPRECTED RESULT;
+111;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Klikam przycisk Menu;W³¹cza siê Menu;
 ;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
 ;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
 ;4;Nie wype³niam pola Temat i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól;
 ;;;;
-112;STEPID;ACTION;EXPRECTED RESULT;
+112;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Klikam przycisk Menu;W³¹cza siê Menu;
 ;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
 ;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
 ;4;Nie wype³niam pola Wiadomoœæ i klikam wyœlij;Ukazuje siê informacja o zostawieniu pustych pól;
 ;;;;
-113;STEPID;ACTION;EXPRECTED RESULT;
+113;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Klikam przycisk Menu;W³¹cza siê Menu;
 ;2;Klikam przycisk About;W³¹cza siê Okno O Aplikacji;
 ;3;Klikam przycisk Wyœlij Feedback;Pojawia siê okno z polem tekstowym;
@@ -801,22 +801,22 @@ Test case nr;STORY 1;;;
 ;STORY 25;;;
 ;;;;
 119;STEPID;ACTION;EXPRECTED RESULT;
-;1;Wykonujê na mapie gest rozsze¿enia dwoma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
+;1;Wykonujê na mapie gest rozsze¿enia dwoma palcami;Mapa powiêksza siê (jej precyzja wzrasta);pass
 ;;;;
 120;STEPID;ACTION;EXPRECTED RESULT;
 ;1;Wykonujê na menu gest rozsze¿ania;Wygl¹d interfejsu nie ulega zmianie;
-;;;;
+;;;;pass
 121;STEPID;ACTION;EXPRECTED RESULT;
 ;1;Wykonujê na mapie gest rozsze¿enia trzema palcami;Mapa powiêksza siê (jej precyzja wzrasta);
 ;;;;
-122;STEPID;ACTION;EXPRECTED RESULT;
+122;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Wykonujê na mapie gest rozsze¿enia czterema palcami;Mapa powiêksza siê (jej precyzja wzrasta);
 ;;;;
-123;STEPID;ACTION;EXPRECTED RESULT;
+123;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Wykonujê na mapie gest rozsze¿enia piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
 ;STORY 26;;;
 ;;;;
-124;STEPID;ACTION;EXPRECTED RESULT;
+124;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Dotykam jednym palcem na mapê i przesuwam w dowolnym kierunku;Mapa przesuwa siê we wskazanym kierunku;
 ;;;;
 ;STEPID;ACTION;EXPRECTED RESULT;
@@ -888,25 +888,25 @@ Test case nr;STORY 1;;;
 ;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy;
 ;3;"Wybieram opcjê ""Jak zmieniæ has³o?""";Ukazuje siê tekst pomocy na temat zmiany has³a;
 ;;;;
-138;STEPID;ACTION;EXPRECTED RESULT;
+138;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Wchodzê do menu;Ukazuje siê menu;
 ;2;Klikam na Pomoc;Ukazuje mi siê formularz pomocy;
 ;3;"Wybieram opcjê ""Jak usun¹æ znajomego?""";Ukazuje siê tekst pomocy na temat usuwania znajomego;
 ;STORY 29;;;
 ;;;;
-139;STEPID;ACTION;EXPRECTED RESULT;
+139;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Klikam na wskazówkê kompasu znajduj¹c¹ siê na mapie;Mapa wraca do domyœlnego po³o¿enia z pó³noc¹ na górze;
 ;;;;
-140;STEPID;ACTION;EXPRECTED RESULT;
+140;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Dotykam ekran dwoma palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;
 ;;;;
 141;STEPID;ACTION;EXPRECTED RESULT;
-;1;Dotykam ekran piêcioma palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;
+;1;Dotykam ekran piêcioma palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;pass
 ;;;;
-142;STEPID;ACTION;EXPRECTED RESULT;
+142;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Dotykam ekran trzema palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;
 ;;;;
-143;STEPID;ACTION;EXPRECTED RESULT;
+143;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Dotykam ekran czterema palcami i obracam w dowolnym kierunku;Mapa obraca siê w kierunku palców;
 ;STORY 30;;;
 ;;;;
@@ -916,13 +916,13 @@ Test case nr;STORY 1;;;
 145;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Wykonujê na menu gest szczypania;Wygl¹d interfejsu nie ulega zmianie;
 ;;;;
-146;STEPID;ACTION;EXPRECTED RESULT;
+146;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Wykonujê na mapie gest szczypania trzema palcami;Mapa powiêksza siê (jej precyzja wzrasta);
 ;;;;
-147;STEPID;ACTION;EXPRECTED RESULT;
+147;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Wykonujê na mapie gest szczypania czterema palcami;Mapa powiêksza siê (jej precyzja wzrasta);
 ;;;;
-148;STEPID;ACTION;EXPRECTED RESULT;
+148;STEPID;ACTION;EXPRECTED RESULT;pass
 ;1;Wykonujê na mapie gest szczypania piêcioma palcami;Mapa powiêksza siê (jej precyzja wzrasta);
 ;;;;
 149;STEPID;ACTION;EXPRECTED RESULT;pass
