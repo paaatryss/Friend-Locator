@@ -23,5 +23,13 @@ public class OknoPomoc extends Activity {
 		    Intent intent = new Intent(this, OknoWyslijEmail.class);
 		    startActivity(intent);
 	}
+	public void zmianahasla(View view) {
+	    Intent intent = new Intent(this, OknoPomocyZmianyHasla.class);
+	    startActivity(intent);
+}
+	public void email(View view) {
+	    Intent intent = new Intent(this, OknoPomocyZmianyEmail.class);
+	    startActivity(intent);
+}
 
 }

@@ -62,7 +62,7 @@ public class OknoMenuGlowne extends Activity {
 	}
 	@SuppressLint("NewApi")
 	public void wyjdz(View view){
-		dataupdate.updateTimer.cancel();
+		dataupdate.updateTimer.purge();
 		finishAffinity();
 	}
 	public void znajomi(View view){

@@ -59,9 +59,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     static public Context re=null;
     static Drawable drawablere=null;
     static Drawable drawablerem=null;
-    static CustomItemizedOverlay itemizedOverlayre=null;
-	
-	static ServerConnector test = new ServerConnector(OknoLogowania.getToken());
+    static CustomItemizedOverlay itemizedOverlayre=null;	
 	
 	public LocationManager locmgr = null;
 	//public TextView mytext;
@@ -83,7 +81,6 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
             latitude = loc.getLatitude();
             longitude = loc.getLongitude();
             Log.d("onLocationChanged", "przed upd na serv, token:"+OknoLogowania.getToken());
-            Log.d("onLocationChanged", Integer.toString(test.SendMyLocation((int) (latitude*1e6), (int) (longitude*1e6))) );
             
             update();
         }
@@ -159,19 +156,17 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
         drawablerem = re.getResources().getDrawable(R.drawable.map_point);
     	itemizedOverlayre = new CustomItemizedOverlay(drawablere, re);
     	itemizedOverlayrem = new CustomItemizedOverlay(drawablerem, re);
-		friends = new ArrayList<Friend>();
-		friends = test.GetFriends();
 		List mapOverlays = mapView.getOverlays();
-		Log.d("ilosc znajomych update!!!!!!!!!!!!!!", Integer.toString(friends.size()));
+		Log.d("ilosc znajomych update!!!!!!!!!!!!!!", Integer.toString(dataupdate.friends.size()));
 		if(mapOverlays==null || itemizedOverlayre==null){
 		}
 		else{
 		mapOverlays.clear();
 		itemizedOverlayre.remove();
 		itemizedOverlayrem.remove();
-		for(int i=0; i<friends.size(); i++)
+		for(int i=0; i<dataupdate.friends.size(); i++)
 		{
-			Friend fr = friends.get(i);
+			Friend fr = dataupdate.friends.get(i);
 			Log.d("latiutude", Integer.toString(fr.getLatitude()));
 			GeoPoint point = new GeoPoint(fr.getLatitude(), fr.getLongitude());
 			OverlayItem overlayitem = new OverlayItem(point, fr.getName(),
@@ -242,6 +237,27 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 			mapOverlays.add(itemizedOverlay);
 			MapController mapController = mapView.getController();
 		}
+		Spinner spinner2= (Spinner) findViewById(R.id.spinner1);
+    	List list = new ArrayList<String>();
+    	for(int i=0; i<friends.size(); i++){
+    		Friend fr = friends.get(i);
+        	list.add(fr.getName());
+    	}
+    	ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+    		android.R.layout.simple_spinner_item, list);
+    	dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    	spinner2.setAdapter(dataAdapter); 
+    	
+    	spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    	    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+    	    	Friend fr = dataupdate.friends.get(pos);
+	        	MapController mapController = OknoMenu.mapView.getController();
+	        	GeoPoint point2 = new GeoPoint(fr.getLatitude(), fr.getLongitude());
+	        	mapController.animateTo(point2);
+    	    }
+    	    public void onNothingSelected(AdapterView<?> parent) {
+    	    }
+    	});
 		CustomItemizedOverlay itemizedOverlay = new CustomItemizedOverlay(
 				drawable, this);
 		CustomItemizedOverlay itemizedOverlay2 = new CustomItemizedOverlay(
@@ -292,6 +308,17 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	    Intent intent = new Intent(this, OknoMenuGlowne.class);
 	    startActivity(intent);
 	}
+	   Context context;
+	    public void center(View view){
+	    	if(pointme!=null){
+	    	MapController mapController = mapView.getController();
+	    	mapController.animateTo(pointme);
+	    	}
+	    	else{
+	    		context = getApplicationContext();
+	    		Toast.makeText(context, "czekam na znalezienie twojej pozycji", Toast.LENGTH_LONG).show();
+	    	}
+	    }
 	 public boolean onKeyDown(int keyCode, KeyEvent event) {
 	      Log.d(null,"In on Key Down");
 	      if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -304,7 +331,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	      		@SuppressLint("NewApi")
 				public void onClick(DialogInterface dialog, int which) {			      	
 	      	    	//Yes button clicked, do something
-	      			dataupdate.updateTimer.cancel();
+	      			dataupdate.updateTimer.purge();
 	      	    	finishAffinity();
 	      	    }
 	      	})

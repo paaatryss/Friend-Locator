@@ -40,5 +40,8 @@
     <string name="button_wyslij_email">Wyślij do nas maila</string>
     <string name="text_tresc">Treść</string>
     <string name="text_tytul">Tytuł</string>
+    <string name="button_center">Center</string>
+    <string name="text_jakzmienichaslo">Jak zmienić hasło?</string>
+    <string name="text_jakzmienicmaila">Jak zmienić email?</string>
 
 </resources>
