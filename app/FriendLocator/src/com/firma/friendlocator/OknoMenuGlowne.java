@@ -23,6 +23,7 @@ public class OknoMenuGlowne extends Activity {
 		
 	}
 	public void wyloguj(View view) {
+		dataupdate.updateTimer.cancel();
 		dataupdate.updateTimer.purge();
 		Intent intent = new Intent(this, OknoLogowania.class);
 	    startActivity(intent);
@@ -62,6 +63,7 @@ public class OknoMenuGlowne extends Activity {
 	}
 	@SuppressLint("NewApi")
 	public void wyjdz(View view){
+		dataupdate.updateTimer.cancel();
 		dataupdate.updateTimer.purge();
 		finishAffinity();
 	}

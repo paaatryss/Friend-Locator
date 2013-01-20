@@ -9,11 +9,11 @@ import android.util.Log;
 public class dataupdate {
 	static Timer updateTimer = new Timer("gForceUpdate");
 	static ArrayList<Friend> friends;
+	public static long k=0;
+	public static long w=30000;
 	
 	
 	public static void run2(){
-		long k=0;
-		long w=30000;
 
     updateTimer.scheduleAtFixedRate(new TimerTask() {
 

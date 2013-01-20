@@ -331,6 +331,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	      		@SuppressLint("NewApi")
 				public void onClick(DialogInterface dialog, int which) {			      	
 	      	    	//Yes button clicked, do something
+	      			dataupdate.updateTimer.cancel();
 	      			dataupdate.updateTimer.purge();
 	      	    	finishAffinity();
 	      	    }
