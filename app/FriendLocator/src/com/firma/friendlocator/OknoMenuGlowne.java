@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -25,6 +24,7 @@ public class OknoMenuGlowne extends Activity {
 	public void wyloguj(View view) {
 		dataupdate.updateTimer.cancel();
 		dataupdate.updateTimer.purge();
+		dataupdate.w=30000;
 		Intent intent = new Intent(this, OknoLogowania.class);
 	    startActivity(intent);
 	}
@@ -65,6 +65,7 @@ public class OknoMenuGlowne extends Activity {
 	public void wyjdz(View view){
 		dataupdate.updateTimer.cancel();
 		dataupdate.updateTimer.purge();
+		dataupdate.w=30000;
 		finishAffinity();
 	}
 	public void znajomi(View view){

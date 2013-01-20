@@ -38,19 +38,19 @@ public final class R {
         public static final int button_zaproszenia=0x7f050010;
         public static final int button_zarejestruj=0x7f050009;
         public static final int button_zarejestruj_rejestracja=0x7f05001d;
-        public static final int button_zmiana_hasla=0x7f05001e;
-        public static final int button_zmien_email=0x7f05001f;
+        public static final int button_zmiana_hasla=0x7f05001f;
+        public static final int button_zmien_email=0x7f05001e;
         public static final int button_zmien_widok=0x7f050012;
         public static final int button_znajomi=0x7f05000f;
         public static final int checkBox_zapamietajDane=0x7f050007;
-        public static final int editText1=0x7f050024;
+        public static final int editText1=0x7f050021;
         public static final int listView1=0x7f05002c;
         public static final int map_view=0x7f05000b;
         public static final int menu_settings=0x7f05002e;
         public static final int spinner1=0x7f05000d;
         public static final int textView1=0x7f050002;
         public static final int textView2=0x7f050020;
-        public static final int textView3=0x7f050022;
+        public static final int textView3=0x7f050023;
         public static final int text_email_rejestracja=0x7f05001c;
         public static final int text_email_znajomy=0x7f050003;
         public static final int text_haslo=0x7f050006;
@@ -59,8 +59,8 @@ public final class R {
         public static final int text_login_rejestracja=0x7f05001a;
         public static final int text_login_zapomnialem=0x7f050025;
         public static final int text_zmien_haslo=0x7f050027;
-        public static final int tresc=0x7f050023;
-        public static final int tytul=0x7f050021;
+        public static final int tresc=0x7f050024;
+        public static final int tytul=0x7f050022;
         public static final int wpisz_nowe_email=0x7f050029;
         public static final int wpisz_nowe_haslo=0x7f05002b;
         public static final int wpisz_stare_email=0x7f050028;
@@ -119,6 +119,9 @@ public final class R {
         public static final int naglowek_okno_zapomnialem_danych=0x7f04000f;
         public static final int passwordRepeat=0x7f04000b;
         public static final int registerLabel=0x7f040009;
+        public static final int text_10s=0x7f04002a;
+        public static final int text_20s=0x7f04002b;
+        public static final int text_30s=0x7f04002c;
         public static final int text_jakzmienichaslo=0x7f040027;
         public static final int text_jakzmienicmaila=0x7f040028;
         public static final int text_nowe_haslo=0x7f040020;
@@ -127,6 +130,8 @@ public final class R {
         public static final int text_stare_haslo=0x7f04001f;
         public static final int text_tresc=0x7f040024;
         public static final int text_tytul=0x7f040025;
+        public static final int text_zatwierdź=0x7f04002d;
+        public static final int text_zmianasynk=0x7f040029;
         public static final int title=0x7f040000;
         public static final int titleRegistry=0x7f04000a;
     }

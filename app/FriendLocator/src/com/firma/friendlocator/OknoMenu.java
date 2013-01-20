@@ -74,8 +74,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	//Start a location listener
     LocationListener onLocationChange=new LocationListener() {
         public void onLocationChanged(Location loc) {
-            //sets and displays the lat/long when a location is provided
-            String latlong = "Moja Lokacja: " + loc.getLatitude() + ", " + loc.getLongitude();   
+            //sets and displays the lat/long when a location is provided  
             latitudeold=latitude;
             longitudeold=longitude;
             latitude = loc.getLatitude();
@@ -214,7 +213,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
         //mytext.setText("Oczekiwanie na lokalizacje");
         
 		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
-		friends = new ArrayList<Friend>();
+		//friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		
 		mapView = (MapView) findViewById(R.id.map_view);
@@ -333,6 +332,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	      	    	//Yes button clicked, do something
 	      			dataupdate.updateTimer.cancel();
 	      			dataupdate.updateTimer.purge();
+	      			dataupdate.w=30000;
 	      	    	finishAffinity();
 	      	    }
 	      	})

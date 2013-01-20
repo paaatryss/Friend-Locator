@@ -43,5 +43,10 @@
     <string name="button_center">Center</string>
     <string name="text_jakzmienichaslo">Jak zmienić hasło?</string>
     <string name="text_jakzmienicmaila">Jak zmienić email?</string>
+    <string name="text_zmianasynk">Podaj nowy czas synchronizacj(sekundy)</string>
+    <string name="text_10s">10s</string>
+    <string name="text_20s">20s</string>
+    <string name="text_30s">30s</string>
+    <string name="text_zatwierdź">Zatwierdź zmiane czasu</string>
 
 </resources>
