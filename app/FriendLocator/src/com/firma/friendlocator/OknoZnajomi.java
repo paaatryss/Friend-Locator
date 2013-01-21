@@ -29,28 +29,24 @@ import android.widget.Toast;
 
 public class OknoZnajomi extends Activity{
 	private ListView lista1;
+	public int ch=0;
 	Context context,box;
-	private ArrayList<String> listItems = new ArrayList<String>();
-	private ArrayAdapter<String> adapter;
+	public static  ArrayList<String> listItems;
+	public static ArrayAdapter<String> adapter;
 	ArrayList<Friend> friends = new ArrayList<Friend>();
 	
-	protected void onCreate(Bundle savedInstanceState) {		
-		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
-		Log.d("OknoZnajomi", "token pobrany " + OknoLogowania.getToken());
-		friends = test.GetFriends();
-		Log.d("ilosc frendow", Integer.toString(friends.size()));
-		for(int i=0; i<friends.size(); i++)
-		{
-			Friend fr = friends.get(i);
-			listItems.add(fr.getName() + ", " + fr.getLogin());
-		}
-		
-		
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 				setContentView(R.layout.activity_okno_znajomi);
+				listItems= new ArrayList<String>();
+				for(int i=0; i<dataupdate.friends.size(); i++)
+				{
+					Friend fr = dataupdate.friends.get(i);
+					listItems.add(fr.getName() + ", " + fr.getLogin());
+				}
 				setUpView();
 				box=(Context) this;
 	}
@@ -68,7 +64,7 @@ public class OknoZnajomi extends Activity{
 	        public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 	                long arg3) {
 	            // TODO Auto-generated method stub
-	        	Friend fr = friends.get(arg2);
+	        	Friend fr = dataupdate.friends.get(arg2);
 	        	MapController mapController = OknoMenu.mapView.getController();
 	        	GeoPoint point2 = new GeoPoint(fr.getLatitude(), fr.getLongitude());
 	        	ss();
@@ -95,6 +91,14 @@ public class OknoZnajomi extends Activity{
 	  	      	    	//Yes button clicked, do something
 		        		context = getApplicationContext();
 		        		Toast.makeText(context, "Znajomy usuniety", Toast.LENGTH_LONG).show();
+		        		OknoMenu.list.clear();
+		        		OknoMenu.dataAdapter.notifyDataSetChanged();
+						for(int i=0; i<dataupdate.friends.size(); i++)
+						{
+							Friend fr = dataupdate.friends.get(i);
+							OknoMenu.list.add(fr.getName());
+						}
+		        		OknoMenu.dataAdapter.notifyDataSetChanged();
 		        		 recreate ();
 	  	      	    }
 	  	      	})

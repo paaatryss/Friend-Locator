@@ -53,7 +53,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	static double longitude,longitudeold;
 	
     static public Context re=null;
-    List list= null;
+    static List list= null;
     static Drawable drawablere=null;
     static Drawable drawablerem=null;
     static CustomItemizedOverlay itemizedOverlayre=null;	
@@ -63,7 +63,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	
 	static Boolean value1=false;
 	public static GeoPoint pointme=null;
-	ArrayAdapter<String> dataAdapter=null;
+	static ArrayAdapter<String> dataAdapter=null;
 	
 	protected boolean isRouteDisplayed() {
 		return false;
@@ -188,7 +188,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 
 		}
     }
-    public Handler handler=new Handler();
+    Spinner spinner2;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -198,27 +198,12 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 		setContentView(R.layout.activity_okno_menu);
 		re=(Context)this;
-/*		Log.d("onCreate", "0");
-		spin = (Spinner) findViewById(R.id.spinner1);
-		Log.d("onCreate", "1");
-		spin.setOnItemSelectedListener(this);
-		Log.d("onCreate", "2");
-		this.aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, items1);
-		Log.d("onCreate", "3");
-		aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		Log.d("onCreate", "4");
-		spin.setAdapter(aa);
-		Log.d("onCreate", "5"); */
-		
-		//mytext = (TextView) findViewById(R.id.mytext);
         
         //grab the location manager service
 		dataupdate.run2();
         locmgr = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        //mytext.setText("Oczekiwanie na lokalizacje");
         
 		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
-		//friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		
 		mapView = (MapView) findViewById(R.id.map_view);
@@ -240,7 +225,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 			itemizedOverlay.addOverlay(overlayitem);
 			mapOverlays.add(itemizedOverlay);
 		}
-		Spinner spinner2= (Spinner) findViewById(R.id.spinner1);
+		spinner2= (Spinner) findViewById(R.id.spinner1);
     	list = new ArrayList<String>();
     	for(int i=0; i<=friends.size(); i++){
     		if(i==0){
@@ -252,7 +237,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     		}
     	}
     	dataAdapter = new ArrayAdapter<String>(this,
-    		android.R.layout.simple_spinner_item, list);
+    	android.R.layout.simple_spinner_item, list);
     	dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     	spinner2.setAdapter(dataAdapter); 
     	
@@ -356,11 +341,4 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	      return super.onKeyDown(keyCode, event);
 	  }
 	
-/*	public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
-		selection.setText(items1[position]);
-	}
-
-	public void onNothingSelected(AdapterView<?> parent) {
-		selection.setText("Znajomi");
-	} */
 }
