@@ -20,12 +20,15 @@ public class dataupdate {
     updateTimer.scheduleAtFixedRate(new TimerTask() {
 
     public void run(){
-
+    	if(OknoMenu.guard==0){
+    	OknoMenu.guard=1;
     	Log.d("updateqqq","updateqqq");
     	 test = new ServerConnector(OknoLogowania.getToken());
 		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		OknoMenu.draw();
+		OknoMenu.guard=0;
+    	}
 
 
     }

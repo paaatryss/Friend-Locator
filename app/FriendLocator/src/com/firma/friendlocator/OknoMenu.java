@@ -34,13 +34,7 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
 
 public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelectedListener*/ {
-	
-/*	public TextView selection;
-	public ListView items;
-	public ArrayList<String> listItems = new ArrayList<String>();
-	public Spinner spin;
-	public ArrayAdapter aa;
-	public String[] items1; */
+
 	
 	static ArrayList<Friend> friends;
 	public static MapView mapView;
@@ -48,6 +42,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	public static int ch=0;
 	public static int u=0;
 	public static int ur=0;
+	public static int guard=0;
 
 	private static final int latitudeE6 = 37985339;
 	private static final int longitudeE6 = 23716735;
@@ -84,8 +79,12 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
             longitude = loc.getLongitude();
             dataupdate.test.SendMyLocation((int) (latitude*1e6),(int) (longitude*1e6));
             Log.d("onLocationChanged", "przed upd na serv, token:"+OknoLogowania.getToken());
-            
+            if(guard==0)
+            {
+            guard=1;
             update();
+            guard=0;
+            }
         }
          
         public void onProviderDisabled(String provider) {
@@ -118,9 +117,11 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     }
     static CustomItemizedOverlay itemizedOverlayrem=null;
     static CustomItemizedOverlay meold=null;
+    List mapOverlays;
+    MapController mapController;
     public void update(){
-    	MapController mapController = mapView.getController();
-    	List mapOverlays = mapView.getOverlays();
+    	mapController = mapView.getController();
+    	mapOverlays = mapView.getOverlays();
     	if(meold!=null){
     		mapOverlays.remove(meold);
     		itemizedOverlayrem.remove();
@@ -241,9 +242,14 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 		}
 		Spinner spinner2= (Spinner) findViewById(R.id.spinner1);
     	list = new ArrayList<String>();
-    	for(int i=0; i<friends.size(); i++){
-    		Friend fr = friends.get(i);
+    	for(int i=0; i<=friends.size(); i++){
+    		if(i==0){
+    			list.add("Znajomi:");
+    		}
+    		else{
+    		Friend fr = friends.get(i-1);
         	list.add(fr.getName());
+    		}
     	}
     	dataAdapter = new ArrayAdapter<String>(this,
     		android.R.layout.simple_spinner_item, list);
@@ -252,10 +258,15 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     	
     	spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
     	    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-    	    	Friend fr = dataupdate.friends.get(pos);
+    	    	if(pos==0){
+    	    		
+    	    	}
+    	    	else{
+    	    	Friend fr = dataupdate.friends.get(pos-1);
 	        	MapController mapController = OknoMenu.mapView.getController();
 	        	GeoPoint point2 = new GeoPoint(fr.getLatitude(), fr.getLongitude());
 	        	mapController.animateTo(point2);
+    	    	}
     	    }
     	    public void onNothingSelected(AdapterView<?> parent) {
     	    }
