@@ -47,6 +47,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	public static int i=1;
 	public static int ch=0;
 	public static int u=0;
+	public static int ur=0;
 
 	private static final int latitudeE6 = 37985339;
 	private static final int longitudeE6 = 23716735;
@@ -57,6 +58,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	static double longitude,longitudeold;
 	
     static public Context re=null;
+    List list= null;
     static Drawable drawablere=null;
     static Drawable drawablerem=null;
     static CustomItemizedOverlay itemizedOverlayre=null;	
@@ -66,6 +68,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 	
 	static Boolean value1=false;
 	public static GeoPoint pointme=null;
+	ArrayAdapter<String> dataAdapter=null;
 	
 	protected boolean isRouteDisplayed() {
 		return false;
@@ -117,7 +120,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     public void update(){
     	MapController mapController = mapView.getController();
     	List mapOverlays = mapView.getOverlays();
-    	if(meold!=null || itemizedOverlayrem==null){
+    	if(meold!=null){
     		mapOverlays.remove(meold);
     		itemizedOverlayrem.remove();
     	}
@@ -234,15 +237,14 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
 					fr.getLogin());
 			itemizedOverlay.addOverlay(overlayitem);
 			mapOverlays.add(itemizedOverlay);
-			MapController mapController = mapView.getController();
 		}
 		Spinner spinner2= (Spinner) findViewById(R.id.spinner1);
-    	List list = new ArrayList<String>();
+    	list = new ArrayList<String>();
     	for(int i=0; i<friends.size(); i++){
     		Friend fr = friends.get(i);
         	list.add(fr.getName());
     	}
-    	ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+    	dataAdapter = new ArrayAdapter<String>(this,
     		android.R.layout.simple_spinner_item, list);
     	dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     	spinner2.setAdapter(dataAdapter); 
