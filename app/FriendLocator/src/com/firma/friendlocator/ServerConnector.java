@@ -72,6 +72,7 @@ public class ServerConnector {
 			    		    return new ArrayList<Friend>();
 			    }
 	}
+
 	public int SendMyLocation(int lat, int lng){
 		 StringBuilder builder = new StringBuilder();
 		    HttpClient client = new DefaultHttpClient();
@@ -160,6 +161,56 @@ public class ServerConnector {
 		    		return new ArrayList<String>();
 		}
 	}
+	
+	/**
+	 * Wysyla zaproszenie, podaj login lub email jako String
+	 * @param String text
+	 * @return
+	 */
+	public int SendInv(String text){
+		 StringBuilder builder = new StringBuilder();
+		    HttpClient client = new DefaultHttpClient();
+		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=sendinvitation&token=" + this.token + "&to=" + text);
+		    Log.d("SendInv", "1");
+		    try {
+			      HttpResponse response = client.execute(httpGet);
+			      StatusLine statusLine = response.getStatusLine();
+			      int statusCode = statusLine.getStatusCode();
+			      Log.d("SendInv", "2");
+   		      if (statusCode == 200) {
+   		        HttpEntity entity = response.getEntity();
+   		        InputStream content = entity.getContent();
+   		        BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+   		        String line;
+   		        while ((line = reader.readLine()) != null) {
+   		          builder.append(line + "\n");
+   		        }
+   		      } else {
+   		        	return 1;
+   		      }
+   		     Log.d("SendInv", "3");
+			    } catch (ClientProtocolException e) {
+			      e.printStackTrace();
+			    } catch (IOException e) {
+			      e.printStackTrace();
+			    }
+			    try{
+			    	Log.d("SendInv:", "4");
+			    	JSONObject jObject = new JSONObject(builder.toString());
+			    	Log.d("SendInv:", "5");
+			    	int error = jObject.optInt("error");
+			    	Log.d("SendInv:", "error: " + error);
+			    	if(error != 1)
+			    	{
+			    		return 0;
+			    	}
+			    	Log.d("SendInv:", "6");
+			    }catch(JSONException e){
+			    		return 1;
+			    }
+		return 1;
+		}
+	
 	
 	/**
 	 * Akceptuje zaproszenie, podaj login lub email jako String
@@ -254,6 +305,55 @@ public class ServerConnector {
 			    		return 0;
 			    	}
 			    	Log.d("RejectInv:", "6");
+			    }catch(JSONException e){
+			    		return 1;
+			    }
+		return 1;
+		}
+	
+	/**
+	 * Usuwa znajomego, podaj login lub email jako String
+	 * @param String text
+	 * @return
+	 */
+	public int RemoveFriend(String text){
+		 StringBuilder builder = new StringBuilder();
+		    HttpClient client = new DefaultHttpClient();
+		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=rmfm&token=" + this.token + "&who=" + text);
+		    Log.d("RemoveFriend", "1");
+		    try {
+			      HttpResponse response = client.execute(httpGet);
+			      StatusLine statusLine = response.getStatusLine();
+			      int statusCode = statusLine.getStatusCode();
+			      Log.d("RemoveFriend", "2");
+   		      if (statusCode == 200) {
+   		        HttpEntity entity = response.getEntity();
+   		        InputStream content = entity.getContent();
+   		        BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+   		        String line;
+   		        while ((line = reader.readLine()) != null) {
+   		          builder.append(line + "\n");
+   		        }
+   		      } else {
+   		        	return 1;
+   		      }
+   		     Log.d("RemoveFriend", "3");
+			    } catch (ClientProtocolException e) {
+			      e.printStackTrace();
+			    } catch (IOException e) {
+			      e.printStackTrace();
+			    }
+			    try{
+			    	Log.d("RemoveFriend:", "4");
+			    	JSONObject jObject = new JSONObject(builder.toString());
+			    	Log.d("RemoveFriend:", "5");
+			    	int error = jObject.optInt("error");
+			    	Log.d("RemoveFriend:", "error: " + error);
+			    	if(error != 1)
+			    	{
+			    		return 0;
+			    	}
+			    	Log.d("RemoveFriend:", "6");
 			    }catch(JSONException e){
 			    		return 1;
 			    }
