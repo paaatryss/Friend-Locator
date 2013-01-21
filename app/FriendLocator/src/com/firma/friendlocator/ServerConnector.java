@@ -115,4 +115,149 @@ public class ServerConnector {
 			    }
 		return 1;
 		}
+	public ArrayList<String> GetInvitations(){
+		StringBuilder builder = new StringBuilder();
+	    HttpClient client = new DefaultHttpClient();
+	    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=getinvitations&token=" + this.token);
+	    Log.d("GetInvitations", "1");
+	    try {
+		      HttpResponse response = client.execute(httpGet);
+		      StatusLine statusLine = response.getStatusLine();
+		      int statusCode = statusLine.getStatusCode();
+		      Log.d("GetInvitations", "2");
+		      if (statusCode == 200) {
+		        HttpEntity entity = response.getEntity();
+		        InputStream content = entity.getContent();
+		        BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+		        String line;
+		        while ((line = reader.readLine()) != null) {
+		          builder.append(line + "\n");
+		        }
+		      } else {
+		        	return new ArrayList<String>();
+		      }
+		     Log.d("GetInvitations", "3");
+		    } catch (ClientProtocolException e) {
+		      e.printStackTrace();
+		    } catch (IOException e) {
+		      e.printStackTrace();
+		    }
+		try{
+		    	Log.d("GetInvitations:", "4");
+		    	
+		    	JSONArray jArray = new JSONArray(builder.toString());
+		    	Log.d("GetInvitations", "5");
+		    	ArrayList<String> invitations = new ArrayList<String>();
+		    	Log.d("GetInvitations", "jArray.length() " + Integer.toString(jArray.length()));
+		    	
+		    	for(int i = 0; i < jArray.length(); i++){
+	    			JSONObject rec = jArray.getJSONObject(i);
+	    			Log.d("importuje zaproszenie", rec.getString("inv"));
+	    			invitations.add(rec.getString("inv"));
+		    	}
+		    	return invitations;
+		    }catch(JSONException e){
+		    		return new ArrayList<String>();
+		}
+	}
+	
+	/**
+	 * Akceptuje zaproszenie, podaj login lub email jako String
+	 * @param String text
+	 * @return
+	 */
+	public int AcceptInv(String text){
+		 StringBuilder builder = new StringBuilder();
+		    HttpClient client = new DefaultHttpClient();
+		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=acceptinv&token=" + this.token + "&from=" + text);
+		    Log.d("AcceptInv", "1");
+		    try {
+			      HttpResponse response = client.execute(httpGet);
+			      StatusLine statusLine = response.getStatusLine();
+			      int statusCode = statusLine.getStatusCode();
+			      Log.d("AcceptInv", "2");
+   		      if (statusCode == 200) {
+   		        HttpEntity entity = response.getEntity();
+   		        InputStream content = entity.getContent();
+   		        BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+   		        String line;
+   		        while ((line = reader.readLine()) != null) {
+   		          builder.append(line + "\n");
+   		        }
+   		      } else {
+   		        	return 1;
+   		      }
+   		     Log.d("AcceptInv", "3");
+			    } catch (ClientProtocolException e) {
+			      e.printStackTrace();
+			    } catch (IOException e) {
+			      e.printStackTrace();
+			    }
+			    try{
+			    	Log.d("AcceptInv:", "4");
+			    	JSONObject jObject = new JSONObject(builder.toString());
+			    	Log.d("AcceptInv:", "5");
+			    	int error = jObject.optInt("error");
+			    	Log.d("AcceptInv:", "error: " + error);
+			    	if(error != 1)
+			    	{
+			    		return 0;
+			    	}
+			    	Log.d("AcceptInv:", "6");
+			    }catch(JSONException e){
+			    		return 1;
+			    }
+		return 1;
+		}
+	
+	
+	/**
+	 * Odrzuca zaproszenie, podaj login lub email jako String
+	 * @param String text
+	 * @return
+	 */
+	public int RejectInv(String text){
+		 StringBuilder builder = new StringBuilder();
+		    HttpClient client = new DefaultHttpClient();
+		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=rejectinv&token=" + this.token + "&from=" + text);
+		    Log.d("RejectInv", "1");
+		    try {
+			      HttpResponse response = client.execute(httpGet);
+			      StatusLine statusLine = response.getStatusLine();
+			      int statusCode = statusLine.getStatusCode();
+			      Log.d("RejectInv", "2");
+   		      if (statusCode == 200) {
+   		        HttpEntity entity = response.getEntity();
+   		        InputStream content = entity.getContent();
+   		        BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+   		        String line;
+   		        while ((line = reader.readLine()) != null) {
+   		          builder.append(line + "\n");
+   		        }
+   		      } else {
+   		        	return 1;
+   		      }
+   		     Log.d("RejectInv", "3");
+			    } catch (ClientProtocolException e) {
+			      e.printStackTrace();
+			    } catch (IOException e) {
+			      e.printStackTrace();
+			    }
+			    try{
+			    	Log.d("RejectInv:", "4");
+			    	JSONObject jObject = new JSONObject(builder.toString());
+			    	Log.d("RejectInv:", "5");
+			    	int error = jObject.optInt("error");
+			    	Log.d("RejectInv:", "error: " + error);
+			    	if(error != 1)
+			    	{
+			    		return 0;
+			    	}
+			    	Log.d("RejectInv:", "6");
+			    }catch(JSONException e){
+			    		return 1;
+			    }
+		return 1;
+		}
+	
 }
