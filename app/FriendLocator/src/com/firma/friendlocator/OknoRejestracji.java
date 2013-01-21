@@ -33,7 +33,7 @@ public class OknoRejestracji extends Activity {
     	final EditText emailField = (EditText) findViewById(R.id.text_email_rejestracja);
     	String login = loginField.getText().toString();  
     	String haslo = passwordField.getText().toString();     
-    	String email = emailField.getText().toString(); 
+    	String email = emailField.getText().toString();     	
     	check = Auth.register(login,haslo,email);
     	if(check==0){
         	checka = Auth.login(login,haslo);
@@ -55,7 +55,7 @@ public class OknoRejestracji extends Activity {
     	}
     	else if(check == 1){
     		context = getApplicationContext();
-    		Toast.makeText(context, "niepopoprawny login bπdü has≥o!", Toast.LENGTH_LONG).show();
+    		Toast.makeText(context, "niepopoprawny login haslo lub email!", Toast.LENGTH_LONG).show();
     		
     	}
     	else if(check == 2){

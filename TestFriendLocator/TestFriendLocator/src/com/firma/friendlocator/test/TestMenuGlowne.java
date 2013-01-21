@@ -22,10 +22,6 @@ public class TestMenuGlowne extends ActivityInstrumentationTestCase2<OknoMenuGlo
 	}
 	
 	public void test(){
-		//Assert.assertTrue(solo.searchText("Menu"));
-	    solo.clickOnButton("Znajomi");
-	    solo.assertCurrentActivity("Expected activity", "OknoZnajomi");
-	    solo.goBack();
 	    solo.clickOnButton("Zaproszenia");
 	    solo.assertCurrentActivity("Expected activity", "OknoZaproszenia");
 	    solo.goBack();
@@ -46,9 +42,48 @@ public class TestMenuGlowne extends ActivityInstrumentationTestCase2<OknoMenuGlo
 	    solo.goBack();
 	}
 	public void test3(){
-		solo.clickOnButton("Powrót");
-		solo.assertCurrentActivity("Expected activity", "OknoMenu");
+	    solo.clickOnButton("Ustawienia");
+	    solo.assertCurrentActivity("Expected activity", "OknoUstawienia");
+	    solo.clickOnButton("Zmieñ has³o");
+	    solo.assertCurrentActivity("Expected activity", "OknoZmianaHasla");
 	    solo.goBack();
+	    solo.goBack();
+	}
+	
+	public void test4(){
+	    solo.clickOnButton("Ustawienia");
+	    solo.assertCurrentActivity("Expected activity", "OknoUstawienia");
+	    solo.clickOnButton("Zmieñ email");
+	    solo.assertCurrentActivity("Expected activity", "OknoZmianaEmail");
+	    solo.goBack();
+	    solo.goBack();
+	}
+	public void test5(){
+	    solo.clickOnButton("Pomoc");
+	    solo.assertCurrentActivity("Expected activity", "OknoPomoc");
+	    solo.clickOnButton("Wyœlij do nas maila");
+	    solo.assertCurrentActivity("Expected activity", "OknoWyslijEmail");
+	    solo.goBack();
+	    solo.clickOnButton("Jak zmieniæ has³o");
+	    solo.assertCurrentActivity("Expected activity", "OknoPomocyZmianyHasla");
+	}
+	public void test6(){
+	    solo.clickOnButton("Pomoc");
+	    solo.assertCurrentActivity("Expected activity", "OknoPomoc");
+	    solo.clickOnButton("Jak zmieniæ email");
+	    solo.assertCurrentActivity("Expected activity", "OknoPomocyZmianyEmail");
+	}
+	public void test7(){
+	    solo.clickOnButton("Ustawienia");
+	    solo.assertCurrentActivity("Expected activity", "OknoUstawienia");
+	    solo.clickOnButton("Zmieñ has³o");
+	    solo.assertCurrentActivity("Expected activity", "OknoZmianaHasla");
+	    solo.goBack();
+	    solo.goBack();
+	    solo.clickOnButton("Pomoc");
+	    solo.assertCurrentActivity("Expected activity", "OknoPomoc");
+	    solo.clickOnButton("Jak zmieniæ email");
+	    solo.assertCurrentActivity("Expected activity", "OknoPomocyZmianyEmail");
 	}
 	 public void tearDown() throws Exception {
 
