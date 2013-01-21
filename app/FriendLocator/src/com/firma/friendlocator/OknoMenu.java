@@ -82,6 +82,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
             longitudeold=longitude;
             latitude = loc.getLatitude();
             longitude = loc.getLongitude();
+            dataupdate.test.SendMyLocation((int) (latitude*1e6),(int) (longitude*1e6));
             Log.d("onLocationChanged", "przed upd na serv, token:"+OknoLogowania.getToken());
             
             update();

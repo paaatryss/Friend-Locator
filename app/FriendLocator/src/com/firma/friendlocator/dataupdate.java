@@ -9,6 +9,7 @@ import android.util.Log;
 public class dataupdate {
 	static Timer updateTimer = null;
 	static ArrayList<Friend> friends;
+	static ServerConnector test=null;
 	public static long k=0;
 	public static long w=30000;
 	
@@ -21,7 +22,7 @@ public class dataupdate {
     public void run(){
 
     	Log.d("updateqqq","updateqqq");
-    	ServerConnector test = new ServerConnector(OknoLogowania.getToken());
+    	 test = new ServerConnector(OknoLogowania.getToken());
 		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		OknoMenu.draw();
