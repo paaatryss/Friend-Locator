@@ -17,7 +17,7 @@
     <string name="hint_email">email</string>
     <string name="button_wyslij">wyslij</string>
     <string name="naglowek_okno_rejestracja">Aby się zarejestrować prosze wypełnić poniższe pola</string>
-    <string name="naglowek_okno_zapomnialem_danych">Okno zapomnialem danych ogarnij to</string>
+    <string name="naglowek_okno_zapomnialem_danych">Wpisz swój login oraz email, aby otrzymać hasło</string>
     <string name="menu">Menu</string>
     <string name="button_powrot">Powrót</string>
     <string name="button_ustawienia">Ustawienia</string>
