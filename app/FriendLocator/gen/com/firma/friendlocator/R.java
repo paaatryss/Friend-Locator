@@ -44,7 +44,7 @@ public final class R {
         public static final int button_znajomi=0x7f050012;
         public static final int checkBox_zapamietajDane=0x7f05000a;
         public static final int editText1=0x7f050023;
-        public static final int listView1=0x7f05002d;
+        public static final int listView1=0x7f050028;
         public static final int map_view=0x7f05000e;
         public static final int menu_settings=0x7f05002f;
         public static final int spinner1=0x7f050010;
@@ -59,13 +59,13 @@ public final class R {
         public static final int text_login=0x7f050008;
         public static final int text_login_rejestracja=0x7f05001d;
         public static final int text_login_zapomnialem=0x7f050026;
-        public static final int text_zmien_haslo=0x7f050028;
+        public static final int text_zmien_haslo=0x7f050029;
         public static final int tresc=0x7f050025;
         public static final int tytul=0x7f050024;
-        public static final int wpisz_nowe_email=0x7f05002a;
-        public static final int wpisz_nowe_haslo=0x7f05002c;
-        public static final int wpisz_stare_email=0x7f050029;
-        public static final int wpisz_stare_haslo=0x7f05002b;
+        public static final int wpisz_nowe_email=0x7f05002b;
+        public static final int wpisz_nowe_haslo=0x7f05002d;
+        public static final int wpisz_stare_email=0x7f05002a;
+        public static final int wpisz_stare_haslo=0x7f05002c;
     }
     public static final class layout {
         public static final int activity_okno_autorzy=0x7f030000;

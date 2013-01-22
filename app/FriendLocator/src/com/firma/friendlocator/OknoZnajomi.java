@@ -101,7 +101,7 @@ public class OknoZnajomi extends Activity{
 		        		for(int i=0; i<=friends.size(); i++)
 		        		{
 		        			if(i==0){
-		        				listItems.add("Znajomi:");	
+		        				OknoMenu.list.add("Znajomi:");	
 		        			}
 		        			else{
 		        			Friend fr = friends.get(i-1);
@@ -114,6 +114,7 @@ public class OknoZnajomi extends Activity{
 		        		OknoMenu.dataAdapter.notifyDataSetChanged();
 	  	      	    }
 	  	      	})
+
 	  	      	.setNegativeButton("Nie", null)						//Do nothing on no
 	  	      	.show();
 	        	}
