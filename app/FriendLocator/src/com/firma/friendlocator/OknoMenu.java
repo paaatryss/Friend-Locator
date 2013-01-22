@@ -112,7 +112,7 @@ public class OknoMenu extends MapActivity /*implements AdapterView.OnItemSelecte
     @Override
     public void onResume() {
         super.onResume();
-        //locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,1000.0f,onLocationChange);
+        locmgr.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,1000.0f,onLocationChange);
         locmgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,1000.0f,onLocationChange);
     }
     static CustomItemizedOverlay itemizedOverlayrem=null;
