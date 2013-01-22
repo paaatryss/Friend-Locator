@@ -319,7 +319,7 @@ public class ServerConnector {
 	public int RemoveFriend(String text){
 		 StringBuilder builder = new StringBuilder();
 		    HttpClient client = new DefaultHttpClient();
-		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=rmfm&token=" + this.token + "&who=" + text);
+		    HttpGet httpGet = new HttpGet("http://flyer.kei.pl/friendlocator/methods.php?call=rmfr&token=" + this.token + "&who=" + text);
 		    Log.d("RemoveFriend", "1");
 		    try {
 			      HttpResponse response = client.execute(httpGet);

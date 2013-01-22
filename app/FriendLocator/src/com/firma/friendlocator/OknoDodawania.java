@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class OknoDodawania extends Activity {
 	Context context;
+	EditText emailField;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -19,14 +20,19 @@ public class OknoDodawania extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 				setContentView(R.layout.activity_okno_dodawania);		
 	} 
-	//final EditText emailField = (EditText) findViewById(R.id.text_email_znajomy);
 	int check=0;
 	 public void add(View button) { 
-			//String email = emailField.getText().toString();
-			//check=Auth.dodajznajomego(email);
+		 	emailField=(EditText) findViewById(R.id.text_email_znajomy);
+			String email = emailField.getText().toString();
     		context = getApplicationContext();
-    		Toast.makeText(context, "Dodano znajomego!", Toast.LENGTH_LONG).show();
-			
+    		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
+    		check=test.SendInv(email);
+    		if(check==0){
+    			Toast.makeText(context, "Wys≥ano zaproszenie!", Toast.LENGTH_LONG).show();
+    		}
+    		else{
+    			Toast.makeText(context, "B≥Ídny email/login bπdü problem z serwerem", Toast.LENGTH_LONG).show();
+    		}
 		 
 	 }
 

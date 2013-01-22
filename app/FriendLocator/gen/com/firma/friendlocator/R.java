@@ -114,6 +114,7 @@ public final class R {
         public static final int hint_email=0x7f04000c;
         public static final int hint_haslo=0x7f040003;
         public static final int hint_login=0x7f040002;
+        public static final int hint_loginhaslo=0x7f04002e;
         public static final int menu=0x7f040010;
         public static final int naglowek_okno_rejestracja=0x7f04000e;
         public static final int naglowek_okno_zapomnialem_danych=0x7f04000f;
@@ -130,6 +131,7 @@ public final class R {
         public static final int text_stare_haslo=0x7f04001f;
         public static final int text_tresc=0x7f040024;
         public static final int text_tytul=0x7f040025;
+        public static final int text_wyszapro=0x7f04002f;
         public static final int text_zatwierdź=0x7f04002d;
         public static final int text_zmianasynk=0x7f040029;
         public static final int title=0x7f040000;

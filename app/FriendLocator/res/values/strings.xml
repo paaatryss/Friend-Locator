@@ -48,5 +48,7 @@
     <string name="text_20s">20s</string>
     <string name="text_30s">30s</string>
     <string name="text_zatwierdź">Zatwierdź zmiane czasu</string>
+    <string name="hint_loginhaslo">Login lub Email</string>
+    <string name="text_wyszapro">Wyślij zaproszenie</string>
 
 </resources>

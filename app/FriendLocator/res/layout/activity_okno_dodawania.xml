@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/button_dodaj"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/text_wyszapro"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
         android:id="@+id/text_email_znajomy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="@string/hint_email"
+        android:gravity="center"
+        android:hint="@string/hint_loginhaslo"
         android:inputType="textEmailAddress" />
 
     <Button
         android:id="@+id/button_dodaj_znajomy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_below="@+id/text_email_znajomy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
         android:onClick="add"
-        android:text="@string/button_dodaj" />
+        android:text="@string/button_wyslij" />
 
-</LinearLayout>
+</RelativeLayout>

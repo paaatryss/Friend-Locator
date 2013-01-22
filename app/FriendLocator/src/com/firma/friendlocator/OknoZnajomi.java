@@ -33,7 +33,7 @@ public class OknoZnajomi extends Activity{
 	Context context,box;
 	public static  ArrayList<String> listItems;
 	public static ArrayAdapter<String> adapter;
-	ArrayList<Friend> friends = new ArrayList<Friend>();
+	ArrayList<Friend> friends;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -75,7 +75,7 @@ public class OknoZnajomi extends Activity{
 		lista1.setOnItemLongClickListener(new OnItemLongClickListener(){
 
 
-	        public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int arg2,
+	        public boolean onItemLongClick(AdapterView<?> arg0, View arg1, final int arg2,
 	                long arg3) {
 	            // TODO Auto-generated method stub
 	        	int check=0;
@@ -90,16 +90,28 @@ public class OknoZnajomi extends Activity{
 	  				public void onClick(DialogInterface dialog, int which) {			      	
 	  	      	    	//Yes button clicked, do something
 		        		context = getApplicationContext();
-		        		Toast.makeText(context, "Znajomy usuniety", Toast.LENGTH_LONG).show();
+		        		ServerConnector test = new ServerConnector(OknoLogowania.getToken());
+		        		test.RemoveFriend((dataupdate.friends.get(arg2)).getLogin());
 		        		OknoMenu.list.clear();
 		        		OknoMenu.dataAdapter.notifyDataSetChanged();
-						for(int i=0; i<dataupdate.friends.size(); i++)
-						{
-							Friend fr = dataupdate.friends.get(i);
-							OknoMenu.list.add(fr.getName());
-						}
+		        		friends= new ArrayList<Friend>();
+		        		friends = test.GetFriends();
+		        		listItems.clear();
+		        		adapter.notifyDataSetChanged();
+		        		for(int i=0; i<=friends.size(); i++)
+		        		{
+		        			if(i==0){
+		        				listItems.add("Znajomi:");	
+		        			}
+		        			else{
+		        			Friend fr = friends.get(i-1);
+		        			OknoMenu.list.add(fr.getName());
+		        			listItems.add(fr.getName() + ", " + fr.getLogin());
+		        			}
+		        		}
+		        		Toast.makeText(context, "Znajomy usuniety", Toast.LENGTH_LONG).show();
+		        		adapter.notifyDataSetChanged();
 		        		OknoMenu.dataAdapter.notifyDataSetChanged();
-		        		 recreate ();
 	  	      	    }
 	  	      	})
 	  	      	.setNegativeButton("Nie", null)						//Do nothing on no

@@ -16,6 +16,7 @@ public class dataupdate {
 	
 	public static void run2(){
 		updateTimer=new Timer("gForceUpdate");
+		test = new ServerConnector(OknoLogowania.getToken());
 
     updateTimer.scheduleAtFixedRate(new TimerTask() {
 
@@ -23,7 +24,6 @@ public class dataupdate {
     	if(OknoMenu.guard==0){
     	OknoMenu.guard=1;
     	Log.d("updateqqq","updateqqq");
-    	 test = new ServerConnector(OknoLogowania.getToken());
 		friends = new ArrayList<Friend>();
 		friends = test.GetFriends();
 		OknoMenu.draw();
