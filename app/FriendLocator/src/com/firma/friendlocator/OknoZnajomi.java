@@ -110,6 +110,7 @@ public class OknoZnajomi extends Activity{
 		        			}
 		        		}
 		        		Toast.makeText(context, "Znajomy usuniety", Toast.LENGTH_LONG).show();
+		        		if(friends.size()!=0)
 		        		adapter.notifyDataSetChanged();
 		        		OknoMenu.dataAdapter.notifyDataSetChanged();
 	  	      	    }
