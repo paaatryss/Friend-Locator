@@ -50,5 +50,10 @@
     <string name="text_zatwierdź">Zatwierdź zmiane czasu</string>
     <string name="hint_loginhaslo">Login lub Email</string>
     <string name="text_wyszapro">Wyślij zaproszenie</string>
+    <string name="autor1">Andrzej Plutecki</string>
+    <string name="autor2">Leszek Foltman</string>
+    <string name="autor3">Patryk Fuhrman</string>
+    <string name="text_zmem">Aby zmienić email należy z menu głównego wejść w menu ustawień, następnie nacisnąć przycisk zmień Email. W wyświetlonym oknu należy podać swój stary adres Email oraz nowy i zatwierdzić zmiane naciskając przycisk wyślij.</string>
+    <string name="text_h">Aby zmienić hasło należy z menu głównego wejść w menu ustawień, następnie nacisnąć przycisk zmień Hasło. W wyświetlonym oknu należy podać swój stare hasło oraz nowe i zatwierdzić zmiane naciskając przycisk wyślij.</string>
 
 </resources>
